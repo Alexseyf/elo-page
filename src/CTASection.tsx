@@ -2,14 +2,14 @@ import React from 'react';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-background to-blue-background text-white py-16 px-4">
+    <section className="bg-white text-blue-900 py-16 px-4">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
           Pronto para fortalecer o elo entre sua escola e as famílias?
         </h2>
 
         <div className="mb-10 mt-8">
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-8 text-blue-900">
             Se você é gestor escolar ou educador e deseja transformar a comunicação,
             o acompanhamento e a parceria com os pais, o Elo é a solução ideal.
             Leve mais praticidade, segurança e engajamento para a sua comunidade escolar.
@@ -19,10 +19,10 @@ const CTASection: React.FC = () => {
             Solicite uma Demonstração Gratuita
           </button>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-white">
-          <h3 className="text-xl font-semibold mb-4">É pai ou responsável?</h3>
-          <p className="mb-6">
+{/* 
+        <div className="mt-12 pt-8 border-t border-blue-200">
+          <h3 className="text-xl font-semibold mb-4 text-blue-900">É pai ou responsável?</h3>
+          <p className="mb-6 text-blue-900">
             Se sua escola ainda não utiliza o Elo, indique nossa solução!
             E se o aplicativo já estiver disponível para download individual na sua região:
           </p>
@@ -42,10 +42,10 @@ const CTASection: React.FC = () => {
             </button>
           </div>
 
-          <p className="mt-8 italic">
+          <p className="mt-8 italic text-blue-900">
             Conecte-se hoje mesmo ao universo escolar do seu filho com o Elo!
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -56,10 +56,10 @@ const FutureFeaturesSection: React.FC = () => {
             </svg>
             Em Breve
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             Próximas <span className="text-purple-600">Funcionalidades</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-900 max-w-3xl mx-auto">
             Estamos constantemente evoluindo para oferecer ainda mais recursos que facilitarão a gestão escolar
           </p>
         </div>
@@ -88,11 +88,11 @@ const FutureFeaturesSection: React.FC = () => {
 
                 {/* Content */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {feature.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-blue-900 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -116,10 +116,10 @@ const FutureFeaturesSection: React.FC = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">
               Fique por dentro das novidades!
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-blue-900 mb-6">
               Essas funcionalidades estão sendo desenvolvidas com base no feedback dos nossos usuários.
               Tem alguma sugestão? Adoraríamos ouvir!
             </p>

@@ -4,6 +4,27 @@
   font-family: 'Inter', sans-serif;
 }
 
+
+#beneficios,
+#como-funciona,
+#planos,
+#equipe,
+#futuras-features,
+#faq {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  #beneficios,
+  #como-funciona,
+  #planos,
+  #equipe,
+  #futuras-features,
+  #faq {
+    scroll-margin-top: 64px;
+  }
+}
+
 section {
   padding: 4rem 1rem;
 }

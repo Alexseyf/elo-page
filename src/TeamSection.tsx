@@ -46,11 +46,11 @@ const TeamSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             Nossa <span className="text-blue-600">Equipe</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conheça os profissionais talentosos que tornaram o <strong className="text-blue-text">Elo Escola</strong> uma realidade
+          <p className="text-xl text-blue-900 max-w-3xl mx-auto">
+            Conheça os profissionais talentosos que tornaram o <strong className="text-blue-900">Elo Escola</strong> uma realidade
           </p>
         </div>
 
@@ -95,7 +95,7 @@ const TeamSection: React.FC = () => {
                   </span>
                 </div>
 
-                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                <p className="text-blue-900 text-sm mb-6 leading-relaxed">
                   {member.description}
                 </p>
 

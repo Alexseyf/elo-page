@@ -37,36 +37,36 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobile
-        ? 'bg-gradient-to-r from-blue-background to-blue-background shadow-md py-2'
+        ? 'bg-white shadow-md py-2'
         : 'bg-transparent py-4'
         }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className={`text-2xl font-bold ${isScrolled || isMobile ? 'text-blue-text' : 'text-white'}`}>
+            <a href="#" className={`text-2xl font-bold ${isScrolled || isMobile ? 'text-blue-900' : 'text-white'}`}>
               <img className="h-auto w-20" src="/images/logo.png" alt="" />
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#beneficios" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#beneficios" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Benefícios
             </a>
-            <a href="#como-funciona" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#como-funciona" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Como Funciona
             </a>
-            <a href="#planos" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#planos" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Planos
             </a>
-            <a href="#equipe" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#equipe" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Equipe
             </a>
-            <a href="#futuras-features" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#futuras-features" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Novidades
             </a>
-            <a href="#faq" className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-icon transition-colors`}>
+            <a href="#faq" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               FAQ
             </a>
           </nav>
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-6 w-6 ${isScrolled || isMobile ? 'text-white-text' : 'text-white'}`}
+              className={`h-6 w-6 ${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -96,42 +96,42 @@ const Header: React.FC = () => {
             <nav className="flex flex-col space-y-4">
               <a
                 href="#beneficios"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Benefícios
               </a>
               <a
                 href="#como-funciona"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Como Funciona
               </a>
               <a
                 href="#planos"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Planos
               </a>
               <a
                 href="#equipe"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Equipe
               </a>
               <a
                 href="#futuras-features"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Novidades
               </a>
               <a
                 href="#faq"
-                className={`${isScrolled || isMobile ? 'text-white' : 'text-white'} hover:text-blue-200 transition-colors`}
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 FAQ
