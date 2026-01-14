@@ -1,0 +1,11 @@
+Vercel CLI 42.3.0
+Retrieving project…
+Deploying alexseyfs-projects/elo-page
+Uploading [--------------------] (0.0B/78B)
+Uploading [====================] (78.0B/78B)
+Inspect: https://vercel.com/alexseyfs-projects/elo-page/GWr7LxbwLHjn8wtAFWvKfZ8QJRkJ [2s]
+Preview: https://elo-page-2zrxwyexv-alexseyfs-projects.vercel.app [2s]
+https://elo-page-2zrxwyexv-alexseyfs-projects.vercel.appQueued
+Building
+Completing
+To deploy to production (elo-page.vercel.app), run `vercel --prod`

@@ -25,7 +25,7 @@ const SolutionSection: React.FC = () => {
           <div className="flex justify-center">
             <img
               src="/images/app-tela-login.png"
-              alt="Plataforma Elo em um dispositivo"
+              alt="Plataforma Elo Escola em um dispositivo"
               className="w-full max-w-xs rounded-xl shadow-lg"
             />
           </div>

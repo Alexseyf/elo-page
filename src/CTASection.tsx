@@ -11,19 +11,24 @@ const CTASection: React.FC = () => {
         <div className="mb-10 mt-8">
           <p className="text-lg mb-8 text-blue-900">
             Se você é gestor escolar ou educador e deseja transformar a comunicação,
-            o acompanhamento e a parceria com os pais, o Elo é a solução ideal.
+            o acompanhamento e a parceria com os pais, o Elo Escola é a solução ideal.
             Leve mais praticidade, segurança e engajamento para a sua comunidade escolar.
           </p>
 
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-text font-bold py-3 px-8 rounded-full text-lg transition-all">
-            Solicite uma Demonstração Gratuita
-          </button>
+          <a 
+            href="https://wa.me/5553991280129?text=Ol%C3%A1!%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20a%20plataforma"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-8 rounded-full text-lg transition-all"
+          >
+            Solicite mais informações
+          </a>
         </div>
 {/* 
         <div className="mt-12 pt-8 border-t border-blue-200">
           <h3 className="text-xl font-semibold mb-4 text-blue-900">É pai ou responsável?</h3>
           <p className="mb-6 text-blue-900">
-            Se sua escola ainda não utiliza o Elo, indique nossa solução!
+            Se sua escola ainda não utiliza o Elo Escola, indique nossa solução!
             E se o aplicativo já estiver disponível para download individual na sua região:
           </p>
 
@@ -43,7 +48,7 @@ const CTASection: React.FC = () => {
           </div>
 
           <p className="mt-8 italic text-blue-900">
-            Conecte-se hoje mesmo ao universo escolar do seu filho com o Elo!
+            Conecte-se hoje mesmo ao universo escolar do seu filho com o Elo Escola!
           </p>
         </div> */}
       </div>

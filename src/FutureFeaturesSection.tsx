@@ -112,27 +112,6 @@ const FutureFeaturesSection: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">
-              Fique por dentro das novidades!
-            </h3>
-            <p className="text-blue-900 mb-6">
-              Essas funcionalidades estão sendo desenvolvidas com base no feedback dos nossos usuários.
-              Tem alguma sugestão? Adoraríamos ouvir!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                Enviar Sugestão
-              </button>
-              <button className="border-2 border-blue-500 text-blue-500 font-semibold px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
-                Receber Atualizações
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

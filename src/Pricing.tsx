@@ -18,11 +18,11 @@ const PricingElo: React.FC = () => {
           <div className="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-1 hover:shadow-xl">
             <div className="mb-6 text-center">
               <i className="fas fa-puzzle-piece text-4xl text-blue-icon mb-4"></i>
-              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Monte seu Plano Elo</h3>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Monte seu Plano Elo Escola</h3>
               <p className="text-blue-900">Flexibilidade total para sua escola.</p>
             </div>
             <p className="text-blue-900 mb-6 flex-grow">
-              Escolha apenas os módulos que fazem sentido para as necessidades da sua instituição. Pague somente pelo que usar e crie um pacote Elo totalmente personalizado. Ideal para escolas que buscam soluções específicas.
+              Escolha apenas os módulos que fazem sentido para as necessidades da sua instituição. Pague somente pelo que usar e crie um pacote Elo Escola totalmente personalizado. Ideal para escolas que buscam soluções específicas.
             </p>
             <ul className="space-y-3 text-blue-900 mb-8 flex-grow text-left">
               <li className="flex items-start">
@@ -53,7 +53,7 @@ const PricingElo: React.FC = () => {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-background text-white text-sm font-semibold px-4 py-1 rounded-full">Mais Popular</div>
             <div className="mb-6 text-center">
               <i className="fas fa-users text-4xl text-blue-icon mb-4"></i>
-              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Pacote Elo Essencial</h3>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Pacote Elo Escola Essencial</h3>
               <p className="text-blue-900">Ideal para escolas menores.</p>
             </div>
             <p className="text-blue-900 mb-2 text-center">Até <strong className="text-blue-900">100 alunos</strong></p>
@@ -82,7 +82,7 @@ const PricingElo: React.FC = () => {
           <div className="price-card bg-white rounded-xl shadow-lg p-8 flex flex-col transition-transform duration-300 ease-in-out hover:transform hover:-translate-y-1 hover:shadow-xl">
             <div className="mb-6 text-center">
               <i className="fas fa-school text-4xl text-blue-icon mb-4"></i>
-              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Pacote Elo Completo</h3>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-2">Pacote Elo Escola Completo</h3>
               <p className="text-blue-900">Para escolas com mais alunos.</p>
             </div>
             <p className="text-blue-900 mb-2 text-center">A partir de <strong className="text-blue-900">101 alunos</strong></p>
@@ -91,7 +91,7 @@ const PricingElo: React.FC = () => {
             </p>
             <ul className="space-y-3 text-blue-900 mb-8 flex-grow text-left">
               <li className="flex items-start">
-                <i className="fas fa-check-circle text-accent-green mr-3 mt-1"></i> Todas as funcionalidades do Elo Essencial
+                <i className="fas fa-check-circle text-accent-green mr-3 mt-1"></i> Todas as funcionalidades do Elo Escola Essencial
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-accent-green mr-3 mt-1"></i> Módulos avançados inclusos

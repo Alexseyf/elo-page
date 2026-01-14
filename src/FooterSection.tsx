@@ -6,7 +6,7 @@ const FooterSection: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 flex flex-col items-center text-center">
-            <img className="h-16 w-auto mb-2" src="/images/logo.png" alt="Logo Elo" />
+            <img className="h-16 w-auto mb-2" src="/images/logo.png" alt="Logo Elo Escola" />
 
             <p className="text-blue-900 mb-6">Conectando famílias e escolas.</p>
             <p className="text-sm text-blue-700">© {new Date().getFullYear()} Elo Escola. Todos os direitos reservados.</p>
