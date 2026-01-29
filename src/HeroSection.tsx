@@ -30,11 +30,8 @@ const HeroSection: React.FC = () => {
         <div className="mt-10 flex justify-center">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-white hover:bg-blue-50 text-blue-700 font-bold py-4 px-10 rounded-full text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+            className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-300 active:bg-yellow-500 text-blue-900 font-bold py-4 px-12 rounded-full text-lg transition-all shadow-lg hover:shadow-xl active:scale-95 transform hover:-translate-y-1 flex items-center justify-center"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
             Acessar Ambiente de Teste
           </button>
         </div>
