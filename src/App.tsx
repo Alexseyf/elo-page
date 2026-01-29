@@ -35,7 +35,9 @@ function App() {
       <div id="futuras-features">
         <FutureFeaturesSection />
       </div>
-      <SchoolManagerFeatures />
+      <div id="gestao-escolar" className="scroll-mt-28">
+        <SchoolManagerFeatures />
+      </div>
       <CTASection />
       <div id="faq">
         <FAQSection />

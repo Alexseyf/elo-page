@@ -54,14 +54,11 @@ const Header: React.FC = () => {
             <a href="#beneficios" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Benefícios
             </a>
+            <a href="#gestao-escolar" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
+              Gestão
+            </a>
             <a href="#como-funciona" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Como Funciona
-            </a>
-            <a href="#planos" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
-              Planos
-            </a>
-            <a href="#equipe" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
-              Equipe
             </a>
             <a href="#futuras-features" className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-blue-900'} hover:text-blue-600 transition-colors font-medium`}>
               Novidades
@@ -102,25 +99,18 @@ const Header: React.FC = () => {
                 Benefícios
               </a>
               <a
+                href="#gestao-escolar"
+                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Gestão
+              </a>
+              <a
                 href="#como-funciona"
                 className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Como Funciona
-              </a>
-              <a
-                href="#planos"
-                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Planos
-              </a>
-              <a
-                href="#equipe"
-                className={`${isScrolled || isMobile ? 'text-blue-900' : 'text-white'} hover:text-blue-600 transition-colors font-medium`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Equipe
               </a>
               <a
                 href="#futuras-features"
