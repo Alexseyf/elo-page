@@ -76,14 +76,8 @@ const HeroSection: React.FC = () => {
                     <h3 className="font-bold text-slate-800">Administrador</h3>
                   </div>
                   <div className="space-y-2 text-sm">
-                    <div>
-                      <span className="text-slate-500 block text-xs">Email</span>
-                      <code className="bg-slate-50 px-2 py-1 rounded text-slate-700 font-mono block select-all">admin@email.com</code>
-                    </div>
-                    <div>
-                      <span className="text-slate-500 block text-xs">Senha</span>
-                      <code className="bg-slate-50 px-2 py-1 rounded text-slate-700 font-mono block select-all">Admin@123</code>
-                    </div>
+                    <CopyableCredential label="Email" value="admin@email.com" />
+                    <CopyableCredential label="Senha" value="Admin@123" />
                   </div>
                 </div>
 
@@ -96,14 +90,8 @@ const HeroSection: React.FC = () => {
                     <h3 className="font-bold text-slate-800">Professor</h3>
                   </div>
                   <div className="space-y-2 text-sm">
-                    <div>
-                      <span className="text-slate-500 block text-xs">Email</span>
-                      <code className="bg-slate-50 px-2 py-1 rounded text-slate-700 font-mono block select-all">prof@email.com</code>
-                    </div>
-                    <div>
-                      <span className="text-slate-500 block text-xs">Senha</span>
-                      <code className="bg-slate-50 px-2 py-1 rounded text-slate-700 font-mono block select-all">Prof@123</code>
-                    </div>
+                    <CopyableCredential label="Email" value="prof@email.com" />
+                    <CopyableCredential label="Senha" value="Prof@123" />
                   </div>
                 </div>
               </div>
@@ -123,6 +111,43 @@ const HeroSection: React.FC = () => {
         </div>
       )}
     </section>
+  );
+};
+
+const CopyableCredential: React.FC<{ label: string; value: string }> = ({ label, value }) => {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(value);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div>
+      <span className="text-slate-500 block text-xs mb-1">{label}</span>
+      <button
+        onClick={handleCopy}
+        className="w-full flex items-center justify-between bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50 px-3 py-2 rounded transition-all group"
+        title="Clique para copiar"
+      >
+        <code className="text-slate-700 font-mono text-sm">{value}</code>
+        <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 group-hover:text-blue-600 transition-colors">
+          {copied ? (
+            <span className="flex items-center text-green-600">
+              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+              Copiado
+            </span>
+          ) : (
+            <span className="flex items-center">
+              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+              Copiar
+            </span>
+          )}
+        </span>
+      </button>
+    </div>
   );
 };
 
