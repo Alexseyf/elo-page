@@ -2,7 +2,7 @@ import React from 'react';
 
 const PricingElo: React.FC = () => {
   return (
-    <section id="Pricing" className="py-12 md:py-20 bg-white">
+    <section id="Pricing" className="py-12 md:py-20 bg-orange-50">
       <div className="container mx-auto max-w-6xl px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">

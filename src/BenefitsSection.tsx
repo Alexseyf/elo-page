@@ -2,7 +2,7 @@ import React from 'react';
 
 const BenefitsSection: React.FC = () => {
   return (
-    <section className="bg-blue-50 py-16 px-4">
+    <section className="bg-emerald-50 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 text-center">
           Benefícios Detalhados
@@ -29,13 +29,13 @@ const BenefitsSection: React.FC = () => {
             <div className="flex items-center mb-4">
               <div className="bg-blue-100 p-3 rounded-full mr-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-blue-900">Comunicação Transparente e Ágil</h3>
+              <h3 className="text-xl font-semibold text-blue-900">Acompanhamento Pedagógico Integrado</h3>
             </div>
             <p className="text-blue-900 leading-relaxed">
-              Diga adeus às agendas de papel perdidas e aos grupos de WhatsApp desorganizados! O Elo Escola oferece um canal de comunicação direto, seguro e organizado entre você e os educadores. Envie e receba mensagens individuais ou para a turma, tire dúvidas rapidamente e receba comunicados importantes. Tudo registrado e acessível, facilitando o diálogo e fortalecendo a confiança mútua.
+              Fique por dentro do planejamento escolar de forma simples e acessível. Com o Elo Escola, você acessa o cronograma de atividades, visualiza os objetivos de aprendizado da BNCC trabalhados em cada aula e acompanha os registros diários feitos pelos professores. Tudo para garantir que você esteja sempre conectado com a evolução educacional do seu filho, sem ruídos e com total transparência.
             </p>
           </div>
 

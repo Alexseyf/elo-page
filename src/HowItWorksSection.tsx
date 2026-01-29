@@ -2,7 +2,7 @@ import React from 'react';
 
 const HowItWorksSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-indigo-50 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-12 text-center">
           Como Funciona
@@ -10,7 +10,7 @@ const HowItWorksSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Step 1 */}
-          <div className="bg-blue-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
             <div className="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-6 shadow-md">
               1
             </div>
@@ -21,7 +21,7 @@ const HowItWorksSection: React.FC = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="bg-blue-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
             <div className="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-6 shadow-md">
               2
             </div>
@@ -32,7 +32,7 @@ const HowItWorksSection: React.FC = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="bg-blue-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
             <div className="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-6 shadow-md">
               3
             </div>
@@ -43,7 +43,7 @@ const HowItWorksSection: React.FC = () => {
           </div>
 
           {/* Step 4 */}
-          <div className="bg-blue-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
+          <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center">
             <div className="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mb-6 shadow-md">
               4
             </div>

@@ -2,7 +2,10 @@ import React from 'react';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="bg-white text-blue-900 py-16 px-4">
+    <section className="bg-gradient-to-br from-purple-50 to-indigo-100 text-blue-900 py-24 px-4 relative overflow-hidden">
+      {/* Decorative Circles */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-white/40 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-100/40 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
           Pronto para fortalecer o elo entre sua escola e as famílias?
@@ -15,7 +18,7 @@ const CTASection: React.FC = () => {
             Leve mais praticidade, segurança e engajamento para a sua comunidade escolar.
           </p>
 
-          <a 
+          <a
             href="https://wa.me/5553991280129?text=Ol%C3%A1!%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20a%20plataforma"
             target="_blank"
             rel="noopener noreferrer"
@@ -24,7 +27,7 @@ const CTASection: React.FC = () => {
             Solicite mais informações
           </a>
         </div>
-{/* 
+        {/* 
         <div className="mt-12 pt-8 border-t border-blue-200">
           <h3 className="text-xl font-semibold mb-4 text-blue-900">É pai ou responsável?</h3>
           <p className="mb-6 text-blue-900">

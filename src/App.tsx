@@ -8,9 +8,10 @@ import HowItWorksSection from './HowItWorksSection';
 import CTASection from './CTASection';
 import FAQSection from './FAQSection';
 import FooterSection from './FooterSection';
-import PricingElo from './Pricing';
-import TeamSection from './TeamSection';
+// import PricingElo from './Pricing';
+// import TeamSection from './TeamSection';
 import FutureFeaturesSection from './FutureFeaturesSection';
+import SchoolManagerFeatures from './SchoolManagerFeatures';
 
 function App() {
   return (
@@ -25,15 +26,16 @@ function App() {
       <div id="como-funciona">
         <HowItWorksSection />
       </div>
-      <div id='planos'>
+      {/* <div id='planos'>
         <PricingElo />
-      </div>
-      <div id="equipe">
+      </div> */}
+      {/* <div id="equipe">
         <TeamSection />
-      </div>
+      </div> */}
       <div id="futuras-features">
         <FutureFeaturesSection />
       </div>
+      <SchoolManagerFeatures />
       <CTASection />
       <div id="faq">
         <FAQSection />

@@ -16,7 +16,7 @@ const SolutionSection: React.FC = () => {
                 que une família e escola de forma simples, segura e eficiente.
               </p>
               <p>
-                Criamos um <strong className="text-blue-900">elo</strong> de comunicação e confiança, permitindo que você
+                Criamos um <strong className="text-blue-900">elo</strong> de confiança e parceria, permitindo que você
                 acompanhe de perto cada passo do desenvolvimento do seu filho na educação infantil, fortalecendo
                 a parceria essencial para um crescimento feliz e saudável.
               </p>
