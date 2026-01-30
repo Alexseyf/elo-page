@@ -12,7 +12,7 @@ const ProblemSection: React.FC = () => {
             A rotina agitada deixa pouco tempo para acompanhar de perto a vida escolar do seu filho?
             A comunicação com a escola parece fragmentada, perdida em agendas de papel ou grupos de
             mensagens confusos? Você gostaria de ter mais visibilidade sobre o que seu pequeno aprende,
-            come, como dorme e se diverte na creche ou pré-escola, mas sente que essa informação nem
+            come, como dorme e se diverte na escola, mas sente que essa informação nem
             sempre chega até você de forma clara e organizada? Essa falta de conexão pode gerar
             insegurança e a sensação de estar perdendo momentos importantes.
           </p>

@@ -20,7 +20,7 @@ const BenefitsSection: React.FC = () => {
               <h3 className="text-xl font-semibold text-blue-900">Rotina Infantil na Palma da Mão</h3>
             </div>
             <p className="text-blue-900 leading-relaxed">
-              Com o Elo Escola, a tranquilidade acompanha você durante todo o dia. Acesse facilmente informações detalhadas sobre a alimentação do seu filho (o que e quanto comeu), os momentos de descanso (horários e qualidade do sono), cuidados com a higiene (como trocas de fralda e idas ao banheiro) e até mesmo sobre seu humor e como ele interagiu nas brincadeiras. Receba um resumo diário completo e sinta a segurança de saber que seu pequeno está bem cuidado, mesmo à distância. É a informação que traz paz ao seu coração.
+              Com o Elo Escola, a tranquilidade acompanha você durante todo o dia. Acesse facilmente informações detalhadas sobre a alimentação do seu filho (o que e quanto comeu), os momentos de descanso (horários e qualidade do sono) e até mesmo sobre sua disposição e como ele interagiu nas brincadeiras. Receba um resumo diário completo e sinta a segurança de saber que seu pequeno está bem cuidado, mesmo à distância. É a informação que traz paz ao seu coração.
             </p>
           </div>
 

@@ -46,7 +46,7 @@ const FAQSection: React.FC = () => {
             </p>
           </div>
 
-          {/* FAQ Item 4 */}
+          {/* FAQ Item 4
           <div className="bg-white rounded-xl p-6 hover:shadow-md transition-all">
             <h3 className="text-xl font-semibold text-blue-900 mb-3">
               O Elo Escola tem algum custo para os pais?
@@ -55,7 +55,7 @@ const FAQSection: React.FC = () => {
               Não, o acesso dos pais ao Elo Escola é completamente gratuito! Apenas a escola contrata a plataforma
               como solução de gestão e comunicação. Os pais e responsáveis recebem acesso automático sem nenhum custo.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

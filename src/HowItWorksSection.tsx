@@ -49,7 +49,7 @@ const HowItWorksSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-blue-900 mb-3">Tudo Pronto!</h3>
             <p className="text-blue-900">
-              Pronto! Tudo configurado para você acompanhar a rotina escolar, fotos e comunicados do seu filho.
+              Pronto! Tudo configurado para você acompanhar a rotina escolar, atividades, cronograma e comunicados do seu filho.
             </p>
           </div>
         </div>
