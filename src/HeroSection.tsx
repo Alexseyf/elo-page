@@ -168,18 +168,18 @@ const HeroSection: React.FC = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
-          {/* Background overlay - separate element is more stable */}
+        <div className="fixed inset-0 z-[999] flex items-start sm:items-center justify-center p-4 overflow-y-auto">
+          {/* Background overlay */}
           <div
-            className="absolute inset-0 bg-forest/80 backdrop-blur-md animate-in fade-in duration-300"
+            className="fixed inset-0 bg-forest/80 backdrop-blur-md animate-in fade-in duration-300"
             onClick={() => setIsModalOpen(false)}
           />
 
           {/* Modal container */}
-          <div className="relative w-full max-w-xl bg-white rounded-[2rem] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300 z-10">
+          <div className="relative w-full max-w-4xl bg-white rounded-[2rem] shadow-2xl animate-in zoom-in-95 duration-300 z-10 my-8">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-6 right-6 z-20 p-2 hover:bg-forest/5 rounded-full text-forest/20 hover:text-forest transition-colors"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-3 bg-white/80 backdrop-blur-sm sm:bg-transparent hover:bg-forest/5 rounded-full text-forest/40 hover:text-forest transition-colors shadow-lg sm:shadow-none"
             >
               <X className="w-6 h-6" />
             </button>
@@ -191,17 +191,23 @@ const HeroSection: React.FC = () => {
               <h2 className="text-3xl font-extrabold text-forest mb-2">Bem-vindo à Escola Modelo</h2>
               <p className="text-forest/60 mb-8 font-medium">Use as credenciais abaixo para testar o ambiente já populado.</p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left mb-8">
                 <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
                   <p className="text-xs font-black uppercase tracking-widest text-ochre">Administrativo</p>
                   <CopyableCredential label="E-mail" value="admin@email.com" />
                   <CopyableCredential label="Senha" value="Admin@123" />
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl border-2 border-forest/5 shadow-sm space-y-4">
+                <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
                   <p className="text-xs font-black uppercase tracking-widest text-terracotta">Professor</p>
                   <CopyableCredential label="E-mail" value="prof@email.com" />
                   <CopyableCredential label="Senha" value="Prof@123" />
+                </div>
+
+                <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4 sm:col-span-2 lg:col-span-1">
+                  <p className="text-xs font-black uppercase tracking-widest text-forest">Responsável</p>
+                  <CopyableCredential label="E-mail" value="resp@email.com" />
+                  <CopyableCredential label="Senha" value="Resp@123" />
                 </div>
               </div>
 
