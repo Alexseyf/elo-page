@@ -1,59 +1,56 @@
 import React from 'react';
+import { ArrowRight, MessageCircle, Sparkles } from 'lucide-react';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-50 to-indigo-100 text-blue-900 py-24 px-4 relative overflow-hidden">
-      {/* Decorative Circles */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-white/40 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-100/40 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
-      <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-          Pronto para fortalecer o elo entre sua escola e as famílias?
+    <section className="bg-forest py-24 px-4 relative overflow-hidden">
+      {/* Geometric & Organic Motifs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-ochre/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-terracotta/10 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-1/4 w-32 h-32 border-4 border-white/5 rounded-[3rem] rotate-12 pointer-events-none"></div>
+
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-ochre text-sm font-black mb-8 border border-white/10 backdrop-blur-sm">
+          <Sparkles className="w-4 h-4" />
+          <span className="uppercase tracking-widest">Pronto para começar?</span>
+        </div>
+
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 tracking-tight leading-[1.1]">
+          Fortaleça o elo entre sua escola <br className="hidden md:block" />
+          <span className="text-ochre">e as famílias hoje mesmo.</span>
         </h2>
 
-        <div className="mb-10 mt-8">
-          <p className="text-lg mb-8 text-blue-900">
-            Se você é gestor escolar ou educador e deseja transformar a comunicação,
-            o acompanhamento e a parceria com os pais, o Elo Escola é a solução ideal.
-            Leve mais praticidade, segurança e engajamento para a sua comunidade escolar.
+        <div className="mb-10 mt-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-12 text-white/80 font-medium leading-relaxed">
+            Se você busca transformar a comunicação e a parceria com os pais,
+            o Elo Escola é a solução desenhada para sua realidade. Praticidade,
+            segurança e engajamento em uma única plataforma.
           </p>
 
-          <a
-            href="https://wa.me/5553991280129?text=Ol%C3%A1!%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20a%20plataforma"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-8 rounded-full text-lg transition-all"
-          >
-            Solicite mais informações
-          </a>
-        </div>
-        {/* 
-        <div className="mt-12 pt-8 border-t border-blue-200">
-          <h3 className="text-xl font-semibold mb-4 text-blue-900">É pai ou responsável?</h3>
-          <p className="mb-6 text-blue-900">
-            Se sua escola ainda não utiliza o Elo Escola, indique nossa solução!
-            E se o aplicativo já estiver disponível para download individual na sua região:
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a
+              href="https://wa.me/5553991280129?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20implementar%20o%20Elo%20Escola."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center gap-3 bg-ochre hover:bg-[#D48F2A] text-white font-black py-5 px-10 rounded-2xl text-xl transition-all shadow-xl shadow-black/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Solicitar Informações
+            </a>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white hover:bg-gray-100 text-blue-text font-bold py-3 px-8 rounded-full text-lg transition-all flex items-center justify-center">
-              <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,9A1.5,1.5 0 0,1 19,10.5A1.5,1.5 0 0,1 17.5,12M14.5,8A1.5,1.5 0 0,1 13,6.5A1.5,1.5 0 0,1 14.5,5A1.5,1.5 0 0,1 16,6.5A1.5,1.5 0 0,1 14.5,8M9.5,8A1.5,1.5 0 0,1 8,6.5A1.5,1.5 0 0,1 9.5,5A1.5,1.5 0 0,1 11,6.5A1.5,1.5 0 0,1 9.5,8M6.5,12A1.5,1.5 0 0,1 5,10.5A1.5,1.5 0 0,1 6.5,9A1.5,1.5 0 0,1 8,10.5A1.5,1.5 0 0,1 6.5,12M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3Z" />
-              </svg>
-              Baixe na App Store
-            </button>
-            <button className="bg-white hover:bg-gray-100 text-blue-text font-bold py-3 px-8 rounded-full text-lg transition-all flex items-center justify-center">
-              <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-              </svg>
-              Baixe no Google Play
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="group flex items-center justify-center gap-2 text-white/60 hover:text-white font-bold transition-colors"
+            >
+              Conhecer Funcionalidades
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
+        </div>
 
-          <p className="mt-8 italic text-blue-900">
-            Conecte-se hoje mesmo ao universo escolar do seu filho com o Elo Escola!
-          </p>
-        </div> */}
+        <p className="mt-12 text-sm text-white/40 font-bold uppercase tracking-[0.2em]">
+          Junte-se a escolas que já transformaram sua gestão
+        </p>
       </div>
     </section>
   );
