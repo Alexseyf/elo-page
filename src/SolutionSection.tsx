@@ -8,7 +8,7 @@ const SolutionSection: React.FC = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-forest/5 rounded-full text-forest text-sm font-black mb-6 border border-forest/10">
               <Share2 className="w-4 h-4" />
               <span>A Revolução na Comunicação Escolar</span>
@@ -27,9 +27,12 @@ const SolutionSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              {['Segurança MGMT', 'Pedagogia BNCC', 'Financeiro Turbo'].map(badge => (
-                <span key={badge} className="px-4 py-1.5 bg-cream border border-forest/10 rounded-lg text-xs font-black text-forest/60 uppercase tracking-widest">
+            <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
+              {['100% Seguro', 'Padrão BNCC', 'Gestão Estratégica'].map(badge => (
+                <span
+                  key={badge}
+                  className="px-5 py-2 bg-cream border-2 border-forest/5 rounded-xl text-[10px] font-black text-forest/40 uppercase tracking-[0.15em] hover:border-forest/20 hover:text-forest/60 transition-all cursor-default"
+                >
                   {badge}
                 </span>
               ))}

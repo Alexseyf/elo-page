@@ -85,7 +85,7 @@ const ROICalculator: React.FC = () => {
 
                                 <button
                                     onClick={() => window.open('https://wa.me/5553991280129?text=Olá!%20Fiz%20o%20cálculo%20de%20ROI%20no%20site%20e%20gostaria%20de%20saber%20como%20economizar%20tempo%20na%20minha%20escola.', '_blank')}
-                                    className="w-full bg-ochre text-white font-black py-5 rounded-xl text-lg hover:bg-[#D48F2A] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
+                                    className="w-full bg-ochre text-white font-black py-5 rounded-xl text-base sm:text-lg hover:bg-[#D48F2A] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
                                 >
                                     Solicitar Informações
                                     <ArrowRight className="w-5 h-5" />

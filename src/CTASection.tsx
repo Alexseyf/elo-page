@@ -32,7 +32,7 @@ const CTASection: React.FC = () => {
               href="https://wa.me/5553991280129?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20implementar%20o%20Elo%20Escola."
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 bg-ochre hover:bg-[#D48F2A] text-white font-black py-5 px-10 rounded-2xl text-xl transition-all shadow-xl shadow-black/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
+              className="group flex items-center justify-center gap-3 bg-ochre hover:bg-[#D48F2A] text-white font-black py-5 px-10 rounded-2xl text-lg sm:text-xl transition-all shadow-xl shadow-black/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
               <MessageCircle className="w-6 h-6" />
               Solicitar Informações
@@ -40,7 +40,7 @@ const CTASection: React.FC = () => {
 
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="group flex items-center justify-center gap-2 text-white/60 hover:text-white font-bold transition-colors"
+              className="group flex items-center justify-center gap-2 text-white/60 hover:text-white font-bold text-sm sm:text-base transition-colors"
             >
               Conhecer Funcionalidades
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
