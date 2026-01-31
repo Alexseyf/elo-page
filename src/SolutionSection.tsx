@@ -20,7 +20,7 @@ const SolutionSection: React.FC = () => {
 
             <div className="space-y-6 text-lg text-forest-light font-medium leading-relaxed">
               <p>
-                Para resolver essa desconexão e trazer mais tranquilidade para a gestão, apresentamos o <strong className="text-forest">Elo Escola</strong>. Mais que uma plataforma, o Elo é a ponte digital que une família e escola de forma simples, segura e profissional.
+                Trazendo uma maior conexão e tranquilidade para a gestão, apresentamos o <strong className="text-forest">Elo Escola</strong>. Mais que uma plataforma, o Elo é a ponte digital que une família e escola de forma simples, segura e profissional.
               </p>
               <p>
                 Criamos um <strong className="text-forest">elo</strong> de confiança inquebrável, permitindo que o gestor tenha controle total e os pais sintam-se presentes em cada descoberta do filho, mesmo à distância.
