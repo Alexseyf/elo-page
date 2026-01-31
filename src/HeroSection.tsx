@@ -92,11 +92,6 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-8 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-forest/10 rounded-full text-forest text-sm font-bold mb-6 border border-forest/20">
-              <Shield className="w-4 h-4" />
-              <span>Multi-tenant & Isolação Total de Dados</span>
-            </div>
-
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-forest mb-6 tracking-tight leading-[1.1]">
               Elo Escola: Gestão que <span className="text-terracotta">organiza</span> e <span className="text-ochre">conecta</span>.
             </h1>
