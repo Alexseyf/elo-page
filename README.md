@@ -4,7 +4,7 @@
 
 ## 📱 Sobre o Projeto
 
-Elo Escola é uma aplicação que conecta famílias e escolas de educação infantil, permitindo que pais e responsáveis acompanhem de perto o desenvolvimento e a rotina escolar de seus filhos. Esta landing page apresenta o aplicativo Elo Escola, suas funcionalidades e benefícios.
+Esta é a Landing Page oficial do **Elo Escola**, uma plataforma completa que conecta famílias e escolas de educação infantil. O objetivo desta página é apresentar o aplicativo, suas funcionalidades, benefícios e demonstrar o retorno sobre o investimento (ROI) para gestores escolares de forma interativa e moderna.
 
 ## 🔗 Link da Página
 
@@ -16,14 +16,19 @@ Acesse a landing page em: [https://landing-page-elo.vercel.app/](https://landing
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
+- [Lucide React](https://lucide.dev/) - Ícones
 
-## 🛠️ Funcionalidades Principais do Elo Escola
+## 🛠️ Funcionalidades da Landing Page
 
-- Acompanhamento da rotina escolar
-- Comunicação direta com a instituição de ensino
-- Recebimento de atualizações e notificações
-- Interface amigável e intuitiva
-- Conexão fortalecida entre família e escola
+A página foi construída com foco em conversão e educação do usuário, incluindo:
+
+- **Calculadora de ROI**: Uma ferramenta interativa onde gestores podem simular a economia de tempo da equipe ao adotar o Elo Escola.
+- **Tabela Comparativa**: Seção que contrasta os riscos do uso de WhatsApp com a segurança e profissionalismo do Elo Escola.
+- **Fluxo de Funcionalidades (Features Stream)**: Apresentação detalhada e visual dos módulos principais:
+    - **Financeiro**: Relatórios e gestão.
+    - **Pedagógico (BNCC)**: Planejamento alinhado.
+    - **Diário de Rotina**: Agilidade no dia a dia.
+    - **Calendário**: Organização de eventos.
 
 ## 🔧 Como Executar o Projeto
 
@@ -63,22 +68,24 @@ Acesse a landing page em: [https://landing-page-elo.vercel.app/](https://landing
 
 ## 📝 Estrutura do Projeto
 
-A landing page é dividida em várias seções:
+A landing page segue uma estrutura lógica de apresentação:
 
-- **Hero Section**: Apresentação principal do Elo Escola
-- **Problem Section**: Identificação dos desafios na comunicação entre família e escola
-- **Solution Section**: Como o Elo Escola resolve esses desafios
-- **How It Works Section**: Passo a passo de como funciona o aplicativo
-- **Benefits Section**: Benefícios principais para pais e escolas
-- **Future Features Section**: Recursos planejados para o futuro
-- **Team Section**: Apresentação da equipe por trás do Elo Escola
-- **FAQ Section**: Perguntas frequentes
-- **CTA Section**: Chamada para ação
+- **Header**: Navegação e acesso rápido.
+- **Hero Section**: Proposta de valor principal.
+- **Problem Section**: Identificação das dores na comunicação escolar.
+- **Solution Section**: Introdução à solução Elo.
+- **Comparison Table**: Comparativo Elo vs WhatsApp.
+- **Features Stream**: Detalhamento das funcionalidades.
+- **ROI Calculator**: Calculadora de economia.
+- **Benefits Section**: Vantagens para todos os stakeholders.
+- **CTA Section**: Chamada para ação final.
+- **FAQ Section**: Perguntas frequentes.
+- **Footer**: Rodapé com links e copyright.
 
 ## 🌐 Deployment
 
-O projeto está hospedado na [Vercel](https://vercel.com), facilitando o deploy contínuo e oferecendo uma infraestrutura robusta.
+O projeto está hospedado na [Vercel](https://vercel.com), com deploy automático via Git.
 
 ## 📅 Última Atualização
 
-15 de agosto de 2025
+Fevereiro de 2026
