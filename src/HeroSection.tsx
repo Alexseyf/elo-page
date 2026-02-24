@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
               <h2 className="text-3xl font-extrabold text-forest mb-2">Bem-vindo à Escola Modelo</h2>
               <p className="text-forest/60 mb-8 font-medium">Use as credenciais abaixo para testar o ambiente já populado.</p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left mb-8">
+              <div className="grid grid-cols-2 gap-4 text-left mb-8">
                 <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
                   <p className="text-xs font-black uppercase tracking-widest text-ochre">Administrativo</p>
                   <CopyableCredential label="E-mail" value="admin@email.com" />
@@ -199,11 +199,18 @@ const HeroSection: React.FC = () => {
                   <CopyableCredential label="Senha" value="Prof@123" />
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4 sm:col-span-2 lg:col-span-1">
+                <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
                   <p className="text-xs font-black uppercase tracking-widest text-forest">Responsável</p>
                   <CopyableCredential label="E-mail" value="resp@email.com" />
                   <CopyableCredential label="Senha" value="Resp@123" />
                 </div>
+
+                <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
+                  <p className="text-xs font-black uppercase tracking-widest text-forest">Auxiliar</p>
+                  <CopyableCredential label="E-mail" value="aux@email.com" />
+                  <CopyableCredential label="Senha" value="Aux@123" />
+                </div>
+
               </div>
 
               <a
