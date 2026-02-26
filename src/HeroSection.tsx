@@ -214,7 +214,7 @@ const HeroSection: React.FC = () => {
               </div>
 
               <a
-                href="https://elo-escola-frontend.vercel.app/"
+                href="https://meueloescola.com.br/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-3 bg-forest text-white font-black py-5 px-12 rounded-2xl text-lg hover:shadow-xl hover:shadow-forest/20 transition-all active:scale-95 group"
