@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
               <h2 className="text-3xl font-extrabold text-forest mb-2">Bem-vindo à Escola Modelo</h2>
               <p className="text-forest/60 mb-8 font-medium">Use as credenciais abaixo para testar o ambiente já populado.</p>
 
-              <div className="grid grid-cols-2 gap-4 text-left mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
                 <div className="bg-white p-6 rounded-2xl border border-forest/5 shadow-sm space-y-4">
                   <p className="text-xs font-black uppercase tracking-widest text-ochre">Administrativo</p>
                   <CopyableCredential label="E-mail" value="admin@email.com" />
