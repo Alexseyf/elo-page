@@ -14,7 +14,7 @@ import FooterSection from './FooterSection';
 
 function App() {
   return (
-    <div className="App font-sans selection:bg-ochre selection:text-white">
+    <div className="App font-sans selection:bg-amber selection:text-white">
       <Header />
       <HeroSection />
 

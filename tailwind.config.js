@@ -7,14 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'forest': 'var(--primary-forest)',
-        'forest-dark': 'var(--primary-forest-dark)',
-        'forest-light': 'var(--primary-forest-light)',
-        'terracotta': 'var(--accent-terracotta)',
-        'ochre': 'var(--accent-ochre)',
-        'cream': 'var(--bg-cream)',
+        'slate': 'var(--primary-slate)',
+        'slate-light': 'var(--primary-slate-light)',
+        'amber': 'var(--accent-amber)',
+        'rose': 'var(--accent-rose)',
+        'warm': 'var(--bg-warm)',
         'dark': 'var(--text-dark)',
-      }
+      },
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],

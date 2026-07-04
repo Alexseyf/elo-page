@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import Reveal from './Reveal';
+import StaggerReveal, { staggerItem } from './StaggerReveal';
 
 const FAQSection: React.FC = () => {
   const faqs = [
@@ -22,26 +25,30 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
+    <Reveal>
     <section className="bg-white py-24 px-4 overflow-hidden">
       <div className="container mx-auto max-w-4xl relative">
-        <div className="absolute -top-12 -right-12 w-32 h-32 bg-ochre/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-12 -right-12 w-32 h-32 bg-amber/5 rounded-full blur-3xl"></div>
 
         <div className="text-center mb-16">
-          <div className="w-16 h-16 bg-forest/5 rounded-2xl flex items-center justify-center text-forest mx-auto mb-6">
+          <div className="w-16 h-16 bg-slate/5 rounded-2xl flex items-center justify-center text-slate mx-auto mb-6">
             <HelpCircle className="w-8 h-8" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-forest tracking-tight">
-            Dúvidas <span className="text-ochre">Frequentes</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate tracking-tight">
+            Dúvidas <span className="text-amber">Frequentes</span>
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <StaggerReveal className="space-y-4">
           {faqs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            <motion.div key={index} variants={staggerItem}>
+              <FAQItem question={faq.question} answer={faq.answer} />
+            </motion.div>
           ))}
-        </div>
+        </StaggerReveal>
       </div>
     </section>
+    </Reveal>
   );
 };
 
@@ -52,18 +59,18 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
     <div className="group">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full text-left p-6 md:p-8 rounded-3xl transition-all border-2 ${isOpen ? 'bg-forest border-forest text-white' : 'bg-cream border-forest/5 text-forest hover:border-forest/20'
+        className={`w-full text-left p-6 md:p-8 rounded-3xl transition-all border-2 ${isOpen ? 'bg-slate border-slate text-white' : 'bg-warm border-slate/5 text-slate hover:border-slate/20'
           }`}
       >
         <div className="flex justify-between items-center gap-4">
           <h3 className="text-xl font-bold tracking-tight">{question}</h3>
-          <div className={`${isOpen ? 'text-ochre' : 'text-forest/40'}`}>
+          <div className={`${isOpen ? 'text-amber' : 'text-slate/40'}`}>
             {isOpen ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
           </div>
         </div>
         {isOpen && (
           <div className="mt-4 pt-4 border-t border-white/10 animate-in slide-in-from-top-2 duration-300">
-            <p className={`${isOpen ? 'text-white/80' : 'text-forest-light'} font-medium leading-relaxed`}>
+            <p className={`${isOpen ? 'text-white/80' : 'text-slate-light'} font-medium leading-relaxed`}>
               {answer}
             </p>
           </div>

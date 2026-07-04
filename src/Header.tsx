@@ -24,18 +24,18 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-white/80 backdrop-blur-md border-b border-forest/5 py-4'
+        ? 'bg-white/80 backdrop-blur-md border-b border-slate/5 py-4'
         : 'bg-transparent py-6'
         }`}
     >
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            {/* <div className="w-10 h-10 bg-forest rounded-xl flex items-center justify-center text-ochre shadow-lg rotate-3 group hover:rotate-0 transition-transform cursor-pointer">
+            {/* <div className="w-10 h-10 bg-slate rounded-xl flex items-center justify-center text-amber shadow-lg rotate-3 group hover:rotate-0 transition-transform cursor-pointer">
               <span className="font-black text-xl">E</span>
             </div> */}
-            <a href="#" className="text-2xl font-black text-forest tracking-tighter">
-              Elo<span className="text-ochre">Escola</span>
+            <a href="#" className="text-2xl font-bold text-slate tracking-tighter">
+              Elo<span className="text-amber">Escola</span>
             </a>
           </div>
 
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-bold text-forest/70 hover:text-ochre transition-colors tracking-tight"
+                className="text-sm font-bold text-slate/70 hover:text-amber transition-colors tracking-tight"
               >
                 {link.name}
               </a>
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               href="https://wa.me/5553991280129?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Elo%20Escola%20e%20como%20ele%20pode%20ajudar%20na%20minha%20gestão%20escolar."
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-xl text-sm font-black hover:bg-[#128C7E] transition-all shadow-lg hover:shadow-green-500/20 active:scale-95"
+               className="group flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#128C7E] transition-all shadow-lg hover:shadow-green-500/20 active:scale-95"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-forest"
+            className="md:hidden text-slate"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -78,24 +78,24 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-forest/10 p-6 animate-in slide-in-from-top-5 duration-300">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate/10 p-6 animate-in slide-in-from-top-5 duration-300">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-bold text-forest"
+                  className="text-lg font-bold text-slate"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <hr className="border-forest/5" />
+              <hr className="border-slate/5" />
               <a
                 href="https://wa.me/5553991280129?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Elo%20Escola%20e%20como%20ele%20pode%20ajudar%20na%20minha%20gestão%20escolar."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-black text-lg shadow-lg"
+                className="w-full flex items-center justify-center gap-3 bg-[#25D366] text-white py-5 rounded-2xl font-bold text-lg shadow-lg"
               >
                 <svg
                   viewBox="0 0 24 24"
