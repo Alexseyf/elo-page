@@ -1,61 +1,49 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, Sparkles } from 'lucide-react';
-import Reveal from './Reveal';
 
 const CTASection: React.FC = () => {
   return (
-    <Reveal>
-    <section className="bg-slate py-24 px-4 relative overflow-hidden">
-      {/* Geometric & Organic Motifs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-rose/10 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2"></div>
-      <div className="absolute top-1/2 left-1/4 w-32 h-32 border-4 border-white/5 rounded-[3rem] rotate-12 pointer-events-none"></div>
+    <section className="bg-brand-900 py-24 px-4 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-amber text-sm font-black mb-8 border border-white/10 backdrop-blur-sm">
-          <Sparkles className="w-4 h-4" />
-          <span>Pronto para começar?</span>
-        </div>
+        <Sparkles className="w-5 h-5 text-accent mx-auto mb-4" />
 
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight leading-[1.1]">
-          Fortaleça o elo entre sua escola <br className="hidden md:block" />
-          <span className="text-amber">e as famílias hoje mesmo.</span>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight leading-[1.1] text-balance">
+          Fortaleça o elo entre sua escola{' '}
+          <span className="text-accent">e as famílias hoje mesmo.</span>
         </h2>
 
-        <div className="mb-10 mt-8 max-w-2xl mx-auto">
-          <p className="text-xl mb-12 text-white/80 font-medium leading-relaxed">
-            Se você busca transformar a comunicação e a parceria com os pais,
-            o Elo Escola é a solução desenhada para sua realidade. Praticidade,
-            segurança e engajamento em uma única plataforma.
-          </p>
+        <p className="text-lg text-white/60 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+          Se você busca transformar a comunicação e a parceria com os pais,
+          o Elo Escola é a solução desenhada para sua realidade.
+        </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="https://wa.me/5553991280129?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20implementar%20o%20Elo%20Escola."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 bg-amber hover:bg-[#D48F2A] text-white font-bold py-5 px-10 rounded-2xl text-lg sm:text-xl transition-all shadow-xl shadow-black/20 hover:scale-105 active:scale-95 w-full sm:w-auto"
-            >
-              <MessageCircle className="w-6 h-6" />
-              Solicitar Informações
-            </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://wa.me/5553991280129?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20implementar%20o%20Elo%20Escola."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-4 px-8 rounded-lg transition-all active:scale-[0.98]"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Solicitar Informações
+          </a>
 
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="group flex items-center justify-center gap-2 text-white/60 hover:text-white font-bold text-sm sm:text-base transition-colors"
-            >
-              Conhecer Funcionalidades
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center justify-center gap-2 text-white/50 hover:text-white font-semibold transition-colors"
+          >
+            Conhecer Funcionalidades
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
 
-        <p className="mt-12 text-sm text-white/40 font-bold uppercase tracking-[0.2em]">
+        <p className="mt-12 text-xs text-white/50 font-semibold uppercase tracking-[0.2em]">
           Junte-se a escolas que já transformaram sua gestão
         </p>
       </div>
     </section>
-    </Reveal>
   );
 };
 

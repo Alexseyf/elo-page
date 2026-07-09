@@ -1,82 +1,92 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
-import Reveal from './Reveal';
+import React, { useState, useId } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import Section, { SectionHeader } from './ui/Section';
 import StaggerReveal, { staggerItem } from './StaggerReveal';
 
-const FAQSection: React.FC = () => {
-  const faqs = [
-    {
-      question: "Os dados da minha escola e alunos estão seguros?",
-      answer: "Sim, a segurança é prioridade. Cada escola opera em um ambiente multi-tenant isolado, garantindo que dados financeiros e pedagógicos nunca se misturem. Seguimos rigorosamente a LGPD e utilizamos criptografia de ponta."
-    },
-    {
-      question: "O sistema já vem com a BNCC configurada?",
-      answer: "Sim! O Elo Escola já traz todos os Objetivos de Aprendizagem e Campos de Experiência da BNCC pré-carregados. O professor só precisa selecionar os códigos durante o planejamento, economizando horas de digitação."
-    },
-    {
-      question: "Como funciona o ambiente de teste?",
-      answer: "Ao clicar em 'Experimentar', forneceremos acesso a uma Escola Modelo já populada com alunos e turmas fictícias. Você poderá navegar como Administrador ou Professor para sentir o valor real do produto imediatamente."
-    },
-    {
-      question: "Os pais pagam para usar o aplicativo?",
-      answer: "Não. O acesso para pais e responsáveis é totalmente gratuito. A escola contrata a licença de uso e libera os acessos para sua comunidade sem custos adicionais para as famílias."
-    }
-  ];
-
-  return (
-    <Reveal>
-    <section className="bg-white py-24 px-4 overflow-hidden">
-      <div className="container mx-auto max-w-4xl relative">
-        <div className="absolute -top-12 -right-12 w-32 h-32 bg-amber/5 rounded-full blur-3xl"></div>
-
-        <div className="text-center mb-16">
-          <div className="w-16 h-16 bg-slate/5 rounded-2xl flex items-center justify-center text-slate mx-auto mb-6">
-            <HelpCircle className="w-8 h-8" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate tracking-tight">
-            Dúvidas <span className="text-amber">Frequentes</span>
-          </h2>
-        </div>
-
-        <StaggerReveal className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div key={index} variants={staggerItem}>
-              <FAQItem question={faq.question} answer={faq.answer} />
-            </motion.div>
-          ))}
-        </StaggerReveal>
-      </div>
-    </section>
-    </Reveal>
-  );
-};
+const faqs = [
+  {
+    question: 'Os dados da minha escola e alunos estão seguros?',
+    answer: 'Sim, a segurança é prioridade. Cada escola opera em um ambiente multi-tenant isolado, garantindo que dados financeiros e pedagógicos nunca se misturem. Seguimos rigorosamente a LGPD e utilizamos criptografia de ponta.',
+  },
+  {
+    question: 'O sistema já vem com a BNCC configurada?',
+    answer: 'Sim! O Elo Escola já traz todos os Objetivos de Aprendizagem e Campos de Experiência da BNCC pré-carregados. O professor só precisa selecionar os códigos durante o planejamento, economizando horas de digitação.',
+  },
+  {
+    question: 'Como funciona o ambiente de teste?',
+    answer: 'Ao clicar em "Experimentar", forneceremos acesso a uma Escola Modelo já populada com alunos e turmas fictícias. Você poderá navegar como Administrador ou Professor para sentir o valor real do produto imediatamente.',
+  },
+  {
+    question: 'Os pais pagam para usar o aplicativo?',
+    answer: 'Não. O acesso para pais e responsáveis é totalmente gratuito. A escola contrata a licença de uso e libera os acessos para sua comunidade sem custos adicionais para as famílias.',
+  },
+];
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const id = useId();
+  const panelId = `faq-panel-${id}`;
+  const buttonId = `faq-button-${id}`;
 
   return (
-    <div className="group">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`w-full text-left p-6 md:p-8 rounded-3xl transition-all border-2 ${isOpen ? 'bg-slate border-slate text-white' : 'bg-warm border-slate/5 text-slate hover:border-slate/20'
-          }`}
-      >
-        <div className="flex justify-between items-center gap-4">
-          <h3 className="text-xl font-bold tracking-tight">{question}</h3>
-          <div className={`${isOpen ? 'text-amber' : 'text-slate/40'}`}>
-            {isOpen ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
-          </div>
-        </div>
+    <div className="border border-brand-100 rounded-lg overflow-hidden">
+      <h3>
+        <button
+          id={buttonId}
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full text-left p-5 bg-white hover:bg-warm transition-colors flex justify-between items-center gap-4 min-h-[44px]"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+        >
+          <span className="text-base font-bold text-brand-900">{question}</span>
+          <ChevronDown
+            className={`w-5 h-5 text-brand-600 transition-transform duration-200 shrink-0 ${
+              isOpen ? 'rotate-180' : ''
+            }`}
+          />
+        </button>
+      </h3>
+      <AnimatePresence>
         {isOpen && (
-          <div className="mt-4 pt-4 border-t border-white/10 animate-in slide-in-from-top-2 duration-300">
-            <p className={`${isOpen ? 'text-white/80' : 'text-slate-light'} font-medium leading-relaxed`}>
-              {answer}
-            </p>
-          </div>
+          <motion.div
+            id={panelId}
+            role="region"
+            aria-labelledby={buttonId}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-5 bg-white border-t border-brand-100">
+              <p className="text-sm text-brand-700 font-medium leading-relaxed pt-4">
+                {answer}
+              </p>
+            </div>
+          </motion.div>
         )}
-      </button>
+      </AnimatePresence>
     </div>
+  );
+};
+
+const FAQSection: React.FC = () => {
+  return (
+    <Section id="faq" className="bg-warm">
+      <SectionHeader
+        title="Dúvidas"
+        highlight="Frequentes"
+      />
+
+      <StaggerReveal className="max-w-3xl mx-auto space-y-3">
+        {faqs.map((faq, index) => (
+          <motion.div key={index} variants={staggerItem}>
+            <FAQItem question={faq.question} answer={faq.answer} />
+          </motion.div>
+        ))}
+      </StaggerReveal>
+    </Section>
   );
 };
 

@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import ProblemSection from './ProblemSection';
@@ -10,48 +9,34 @@ import BenefitsSection from './BenefitsSection';
 import CTASection from './CTASection';
 import FAQSection from './FAQSection';
 import FooterSection from './FooterSection';
-// import FutureFeaturesSection from './FutureFeaturesSection';
+
 
 function App() {
   return (
-    <div className="App font-sans selection:bg-amber selection:text-white">
+    <main className="App font-sans selection:bg-accent-muted selection:text-brand-900">
       <Header />
       <HeroSection />
 
-      <div id="problema">
-        <ProblemSection />
-      </div>
+      <ProblemSection />
 
       <SolutionSection />
 
-      <div id="comparativo">
-        <ComparisonTable />
-      </div>
+      <ComparisonTable />
 
-      <div id="funcionalidades" className="scroll-mt-20">
-        <FeaturesStream />
-      </div>
+      <FeaturesStream />
 
-      <div id="roi">
-        <ROICalculator />
-      </div>
+      <ROICalculator />
 
-      <div id="beneficios">
-        <BenefitsSection />
-      </div>
+      <BenefitsSection />
 
-      {/* <div id="futuras-features">
-        <FutureFeaturesSection />
-      </div> */}
+      
 
       <CTASection />
 
-      <div id="faq">
-        <FAQSection />
-      </div>
+      <FAQSection />
 
       <FooterSection />
-    </div>
+    </main>
   );
 }
 

@@ -2,3 +2,12 @@ node_modules
 .vercel
 .agent
 docs
+.gemini/
+.impeccable/
+.opencode/
+AGENTS.md
+DESIGN.md
+PRODUCT.md
+dist/assets/index-CtmO4pVx.css
+dist/assets/index-DdZ54lbu.js
+src/ui/

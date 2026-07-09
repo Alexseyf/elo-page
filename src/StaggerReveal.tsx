@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface StaggerRevealProps {
   children: React.ReactNode;
@@ -7,6 +7,8 @@ interface StaggerRevealProps {
 }
 
 export default function StaggerReveal({ children, className, delay = 0 }: StaggerRevealProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.div
       className={className}
@@ -17,8 +19,8 @@ export default function StaggerReveal({ children, className, delay = 0 }: Stagge
         hidden: {},
         visible: {
           transition: {
-            staggerChildren: 0.1,
-            delayChildren: delay,
+            staggerChildren: prefersReducedMotion ? 0 : 0.1,
+            delayChildren: prefersReducedMotion ? 0 : delay,
           },
         },
       }}

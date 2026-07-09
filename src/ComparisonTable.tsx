@@ -1,114 +1,85 @@
 import React from 'react';
-import { XCircle, CheckCircle2, MessageSquareOff, Database, ShieldAlert, Lock } from 'lucide-react';
-import { motion } from 'framer-motion';
-import Reveal from './Reveal';
-import StaggerReveal, { staggerItem } from './StaggerReveal';
+import { XCircle, CheckCircle2, MessageSquareOff, Database, ShieldAlert } from 'lucide-react';
+import Section, { SectionHeader } from './ui/Section';
 
 const ComparisonTable: React.FC = () => {
-    return (
-        <Reveal>
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-4 max-w-6xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate mb-6 tracking-tight">
-                        Por que o WhatsApp é <span className="text-rose">perigoso</span> para sua escola?
-                    </h2>
-                    <p className="text-xl text-slate/60 max-w-2xl mx-auto font-medium">
-                        O que parece ser prático hoje, pode se tornar um pesadelo jurídico e administrativo amanhã.
-                    </p>
-                </div>
+  return (
+    <Section id="comparativo" className="bg-white">
+      <SectionHeader
+        title="Por que o WhatsApp é"
+        highlight="perigoso para sua escola?"
+        description="O que parece ser prático hoje, pode se tornar um pesadelo jurídico e administrativo amanhã."
+      />
 
-                <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* WhatsApp Column */}
-                    <motion.div variants={staggerItem} className="bg-warm border-2 border-rose/10 rounded-[2.5rem] p-8 md:p-12 relative grayscale hover:grayscale-0 transition-all">
-                        <div className="absolute top-8 right-8 text-rose opacity-20">
-                            <ShieldAlert className="w-16 h-16" />
-                        </div>
-                        <h3 className="text-2xl font-bold text-slate mb-8 flex items-center gap-3">
-                            <div className="w-10 h-10 bg-rose/10 rounded-xl flex items-center justify-center text-rose">
-                                <XCircle className="w-6 h-6" />
-                            </div>
-                            WhatsApp / Grupos
-                        </h3>
-
-                        <ul className="space-y-6">
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <MessageSquareOff className="w-5 h-5 text-rose" />
-                                </div>
-                                <p className="text-slate/70 font-medium">
-                                    <strong className="text-slate">Informação se Perde:</strong> Avisos importantes desaparecem em meio a conversas paralelas e "bom dia".
-                                </p>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <ShieldAlert className="w-5 h-5 text-rose" />
-                                </div>
-                                <p className="text-slate/70 font-medium">
-                                    <strong className="text-slate">Risco de Privacidade:</strong> Telefones de pais e professores expostos a todos do grupo.
-                                </p>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <Database className="w-5 h-5 text-rose" />
-                                </div>
-                                <p className="text-slate/70 font-medium">
-                                    <strong className="text-slate">Sem Histórico Oficial:</strong> Difícil encontrar registros de meses atrás para provas em caso de conflitos.
-                                </p>
-                            </li>
-                        </ul>
-                    </motion.div>
-
-                    {/* Elo Escola Column */}
-                    <motion.div variants={staggerItem} className="bg-slate border-2 border-slate rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative">
-                        <div className="absolute top-8 right-8 text-amber opacity-20">
-                            <Lock className="w-16 h-16" />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <div className="w-10 h-10 bg-amber rounded-xl flex items-center justify-center text-slate">
-                                <CheckCircle2 className="w-6 h-6" />
-                            </div>
-                            Elo Escola
-                        </h3>
-
-                        <ul className="space-y-6">
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <CheckCircle2 className="w-5 h-5 text-amber" />
-                                </div>
-                                <p className="text-white/80 font-medium">
-                                    <strong className="text-white">Centralização Total:</strong> Mural de avisos limpo, organizado e impossível de ignorar.
-                                </p>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <CheckCircle2 className="w-5 h-5 text-amber" />
-                                </div>
-                                <p className="text-white/80 font-medium">
-                                    <strong className="text-white">Privacidade de Dados:</strong> Comunicação profissional sem expor dados pessoais dos usuários.
-                                </p>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
-                                    <CheckCircle2 className="w-5 h-5 text-amber" />
-                                </div>
-                                <p className="text-white/80 font-medium">
-                                    <strong className="text-white">Histórico Vitalício:</strong> Cada registro de rotina e mensagem salvo permanentemente na conta da escola.
-                                </p>
-                            </li>
-                        </ul>
-
-                        <div className="mt-12 p-6 bg-white/5 rounded-2xl border border-white/10">
-                            <p className="text-sm font-semibold text-amber italic text-center">
-                                "O Elo Escola profissionaliza a relação entre a escola e as famílias."
-                            </p>
-                        </div>
-                    </motion.div>
-                </StaggerReveal>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="bg-warm border border-rose/20 rounded-xl p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2.5 bg-rose-muted/50 rounded-lg text-rose">
+              <XCircle className="w-5 h-5" />
             </div>
-        </section>
-        </Reveal>
-    );
+            <h3 className="text-lg font-bold text-brand-900">WhatsApp / Grupos</h3>
+          </div>
+
+          <ul className="space-y-5">
+            <li className="flex items-start gap-3">
+              <MessageSquareOff className="w-4 h-4 text-rose mt-1 shrink-0" />
+              <p className="text-sm text-brand-600 font-medium">
+                <strong className="text-brand-700">Informação se Perde:</strong> Avisos importantes desaparecem em meio a conversas paralelas.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <ShieldAlert className="w-4 h-4 text-rose mt-1 shrink-0" />
+              <p className="text-sm text-brand-600 font-medium">
+                <strong className="text-brand-700">Risco de Privacidade:</strong> Telefones de pais e professores expostos a todos do grupo.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <Database className="w-4 h-4 text-rose mt-1 shrink-0" />
+              <p className="text-sm text-brand-600 font-medium">
+                <strong className="text-brand-700">Sem Histórico Oficial:</strong> Difícil encontrar registros de meses atrás para provas em caso de conflitos.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-brand-900 border border-brand-900 rounded-xl p-8 md:p-10 text-white relative">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2.5 bg-accent/20 rounded-lg text-accent">
+              <CheckCircle2 className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold">Elo Escola</h3>
+          </div>
+
+          <ul className="space-y-5">
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-accent mt-1 shrink-0" />
+              <p className="text-sm text-white/70 font-medium">
+                <strong className="text-white">Centralização Total:</strong> Mural de avisos limpo, organizado e impossível de ignorar.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-accent mt-1 shrink-0" />
+              <p className="text-sm text-white/70 font-medium">
+                <strong className="text-white">Privacidade de Dados:</strong> Comunicação profissional sem expor dados pessoais dos usuários.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-accent mt-1 shrink-0" />
+              <p className="text-sm text-white/70 font-medium">
+                <strong className="text-white">Histórico Vitalício:</strong> Cada registro de rotina e mensagem salvo permanentemente.
+              </p>
+            </li>
+          </ul>
+
+          <div className="mt-10 p-5 bg-white/5 rounded-lg border border-white/10">
+            <p className="text-sm font-semibold text-white text-center">
+              &ldquo;O Elo Escola profissionaliza a relação entre a escola e as famílias.&rdquo;
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
 };
 
 export default ComparisonTable;
