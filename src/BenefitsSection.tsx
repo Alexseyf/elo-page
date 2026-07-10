@@ -33,7 +33,7 @@ const benefits = [
     icon: ShieldCheck,
     title: 'Isolação e Segurança Total',
     description:
-      'Dados protegidos e isolados por tenant (escola). Garantimos que as informações de alunos e financeiros nunca se misturem, respeitando a LGPD.',
+      'Dados protegidos e isolados por escola. Garantimos que as informações de alunos e financeiros nunca se misturem, respeitando a LGPD.',
     iconBg: 'bg-brand-100 text-brand-600',
     hoverBg: 'group-hover:bg-brand-900 group-hover:text-white',
   },

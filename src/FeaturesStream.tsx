@@ -81,7 +81,7 @@ const FeaturesStream: React.FC = () => {
         iconBg="bg-rose-muted/50"
         title="Diferencial BNCC Nativo"
         description="Elimine a burocracia do planejamento pedagógico. O Elo Escola já vem pré-configurado com os Objetivos de Aprendizagem e Campos de Experiência da BNCC."
-        highlight="Campos de Experiência: Eu, o outro, o nós · Corpo, gestos, mov. · Traços, sons, cores"
+        highlight="Campos de Experiência: O eu, o outro e o nós · Corpo, gestos e movimentos · Traços, sons, cores · Escuta, fala, pensamento e imaginação · Espaços, tempos, quantidades, relações e transformações"
       >
         <div className="bg-white border border-brand-100 rounded-xl p-6 md:p-8 shadow-card">
           <p className="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-4">Planejamento do Dia</p>

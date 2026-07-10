@@ -36,7 +36,7 @@ const ComparisonTable: React.FC = () => {
             <li className="flex items-start gap-3">
               <Database className="w-4 h-4 text-rose mt-1 shrink-0" />
               <p className="text-sm text-brand-600 font-medium">
-                <strong className="text-brand-700">Sem Histórico Oficial:</strong> Difícil encontrar registros de meses atrás para provas em caso de conflitos.
+                <strong className="text-brand-700">Sem Histórico Oficial:</strong> Difícil consultar registros antigos para acompanhar a evolução do aluno.
               </p>
             </li>
           </ul>

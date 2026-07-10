@@ -8,9 +8,6 @@ const FooterSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-brand-900 font-extrabold text-lg">
-                E
-              </div>
               <span className="text-2xl font-extrabold tracking-tight">
                 Elo<span className="text-accent">Escola</span>
               </span>

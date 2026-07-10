@@ -166,10 +166,6 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold text-brand-700 bg-brand-100 rounded-full mb-6">
-              Plataforma SaaS para Educação Infantil
-            </span>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-900 mb-6 tracking-tight leading-[1.1] text-balance">
               Gestão escolar que conecta e organiza em um só lugar.
             </h1>
@@ -187,24 +183,24 @@ const HeroSection: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
             </Button>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-brand-100 w-full lg:w-3/4">
+            <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-brand-100 w-full lg:w-3/4">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 bg-white border border-brand-100 rounded-lg text-brand-600">
                   <Shield className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Para Diretores</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Diretores</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2.5 bg-white border border-brand-100 rounded-lg text-brand-600">
                   <BookOpen className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Para Professores</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Professores</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2.5 bg-white border border-brand-100 rounded-lg text-brand-600">
                   <UserCircle className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Para Pais</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Pais</span>
               </div>
             </div>
           </Reveal>
@@ -248,9 +244,6 @@ const HeroSection: React.FC = () => {
 
             <div className="p-8 md:p-10">
               <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-accent" />
-                </div>
                 <h2 id="modal-title" className="text-2xl font-extrabold text-brand-900">Bem-vindo à Escola Modelo</h2>
                 <p className="text-brand-600 mt-1 text-sm">Use as credenciais abaixo para testar o ambiente já populado.</p>
               </div>
