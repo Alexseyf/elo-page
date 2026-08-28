@@ -1,40 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, PencilLine, BarChart3, ShieldCheck } from 'lucide-react';
+import { Sparkles, ShieldCheck, BarChart3, HeartHandshake } from 'lucide-react';
 import Section, { SectionHeader } from './ui/Section';
 import StaggerReveal, { staggerItem } from './StaggerReveal';
 
 const benefits = [
   {
-    icon: Heart,
-    title: 'Paz de Espírito para os Pais',
+    icon: Sparkles,
+    title: 'Inteligência Pedagógica BNCC com IA',
     description:
-      'Acompanhe a rotina, alimentação e sono do seu filho. Receba relatórios diários e sinta a segurança de estar presente mesmo à distância.',
-    iconBg: 'bg-accent-muted text-accent',
-    hoverBg: 'group-hover:bg-amber-700 group-hover:text-white',
+      'Planejamento de atividades dinâmico e pareceres descritivos nos 5 Campos de Experiência da BNCC sem sobrecarga. Devolva tempo precioso para seus professores.',
+    iconBg: 'bg-amber-100 text-amber-800',
+    hoverBg: 'group-hover:bg-amber-800 group-hover:text-white',
   },
   {
-    icon: PencilLine,
-    title: 'Pedagogia sem Papel',
+    icon: ShieldCheck,
+    title: 'Segurança Jurídica & Contratos Digitais',
     description:
-      'Otimize o preenchimento de diários e planejamentos BNCC. Ganhe tempo para focar no desenvolvimento pedagógico.',
+      'Matrículas sem papel, termos aditivos ágeis e livro de ocorrências com hash inalterável e comprovação formal de ciência dos pais.',
     iconBg: 'bg-rose-muted/50 text-rose',
     hoverBg: 'group-hover:bg-rose-600 group-hover:text-white',
   },
   {
     icon: BarChart3,
-    title: 'Gestão Baseada em Dados',
+    title: 'Gestão Financeira & Lucratividade por Sala',
     description:
-      'Tenha snapshots financeiros, controle de inadimplência e visão geral da escola em um clique. Decisões estratégicas com relatórios precisos.',
-    iconBg: 'bg-brand-100 text-brand-600',
-    hoverBg: 'group-hover:bg-brand-900 group-hover:text-white',
+      'Rateio de custos fixos e variáveis, controle de inadimplência e fechamento mensal em Snapshot para decisões estratégicas embasadas.',
+    iconBg: 'bg-accent-muted text-accent',
+    hoverBg: 'group-hover:bg-amber-600 group-hover:text-white',
   },
   {
-    icon: ShieldCheck,
-    title: 'Isolação e Segurança Total',
+    icon: HeartHandshake,
+    title: 'Paz de Espírito & Conexão com as Famílias',
     description:
-      'Dados protegidos e isolados por escola. Garantimos que as informações de alunos e financeiros nunca se misturem, respeitando a LGPD.',
-    iconBg: 'bg-brand-100 text-brand-600',
+      'Linha do tempo da rotina, alimentação, sono e comunicados oficiais em um canal seguro e isolado, garantindo conformidade com a LGPD.',
+    iconBg: 'bg-brand-100 text-brand-700',
     hoverBg: 'group-hover:bg-brand-900 group-hover:text-white',
   },
 ];
@@ -45,25 +45,25 @@ const BenefitsSection: React.FC = () => {
       <SectionHeader
         title="Benefícios que geram"
         highlight="Valor Real"
-        description="Uma solução completa que atende a todos os elos da comunidade escolar."
+        description="Uma solução completa que atende a todos os elos da comunidade escolar com sofisticação e segurança."
       />
 
-      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {benefits.map((benefit) => (
           <motion.div
             key={benefit.title}
             variants={staggerItem}
-            className="bg-white border border-brand-100 rounded-xl p-8 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all group"
+            className="bg-white border border-brand-100 rounded-2xl p-8 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all group"
           >
             <div className="flex items-start gap-4 mb-4">
               <div
-                className={`p-3 rounded-lg transition-all ${benefit.iconBg} ${benefit.hoverBg}`}
+                className={`p-3 rounded-xl transition-all ${benefit.iconBg} ${benefit.hoverBg}`}
               >
                 <benefit.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-brand-900 pt-1">{benefit.title}</h3>
+              <h3 className="text-lg font-bold text-brand-900 pt-0.5">{benefit.title}</h3>
             </div>
-            <p className="text-brand-600 leading-relaxed font-medium">{benefit.description}</p>
+            <p className="text-brand-600 leading-relaxed font-medium text-sm">{benefit.description}</p>
           </motion.div>
         ))}
       </StaggerReveal>
