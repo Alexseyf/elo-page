@@ -33,11 +33,15 @@ const CopyableCredential: React.FC<{ label: string; value: string }> = ({ label,
 
 const AppSlideshow: React.FC = () => {
   const slides = [
-    '/images/slide1.png',
-    '/images/slide2.png',
-    '/images/slide3.png',
-    '/images/slide4.png',
-    '/images/slide5.png'
+    '/images/slide1.jpeg',
+    '/images/slide2.jpeg',
+    '/images/slide3.jpeg',
+    '/images/slide4.jpeg',
+    '/images/slide5.jpeg',
+    '/images/slide6.jpeg',
+    '/images/slide7.jpeg',
+    '/images/slide8.jpeg',
+    '/images/slide9.jpeg'
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
