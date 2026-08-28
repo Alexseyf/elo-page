@@ -4,7 +4,7 @@ import Section, { SectionHeader } from './ui/Section';
 
 const ProblemSection: React.FC = () => {
   return (
-    <Section id="problema" className="bg-warm">
+    <Section id="problema" className="bg-brand-50/40 border-y border-brand-100">
       <SectionHeader
         title="Sua escola ainda é refém de"
         highlight="processos manuais e WhatsApp?"
@@ -13,9 +13,9 @@ const ProblemSection: React.FC = () => {
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Pain 1: Direção */}
-        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between">
+        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between hover:shadow-card-hover transition-all">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-muted/50 text-rose flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose flex items-center justify-center border border-rose-100">
               <FileSpreadsheet className="w-5 h-5" />
             </div>
             <h3 className="text-base font-extrabold text-brand-900">Para a Direção Escolar</h3>
@@ -29,9 +29,9 @@ const ProblemSection: React.FC = () => {
         </div>
 
         {/* Pain 2: Professores */}
-        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between">
+        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between hover:shadow-card-hover transition-all">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
               <Clock className="w-5 h-5" />
             </div>
             <h3 className="text-base font-extrabold text-brand-900">Para os Professores</h3>
@@ -40,14 +40,14 @@ const ProblemSection: React.FC = () => {
             </p>
           </div>
           <div className="mt-6 pt-3 border-t border-brand-100">
-            <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider">Sobrecarga Docente</span>
+            <span className="text-[11px] font-bold text-accent uppercase tracking-wider">Sobrecarga Docente</span>
           </div>
         </div>
 
         {/* Pain 3: Famílias */}
-        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between">
+        <div className="bg-white border border-brand-100 rounded-2xl p-6 shadow-card flex flex-col justify-between hover:shadow-card-hover transition-all">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-100">
               <MessageSquareOff className="w-5 h-5" />
             </div>
             <h3 className="text-base font-extrabold text-brand-900">Para as Famílias</h3>
@@ -56,7 +56,7 @@ const ProblemSection: React.FC = () => {
             </p>
           </div>
           <div className="mt-6 pt-3 border-t border-brand-100">
-            <span className="text-[11px] font-bold text-brand-700 uppercase tracking-wider">Falta de Transparência</span>
+            <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Falta de Transparência</span>
           </div>
         </div>
       </div>

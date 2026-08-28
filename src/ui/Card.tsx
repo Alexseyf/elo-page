@@ -8,15 +8,15 @@ interface CardProps {
 }
 
 const paddings = {
-  sm: 'p-6',
-  md: 'p-8',
-  lg: 'p-10 md:p-12',
+  sm: 'p-5',
+  md: 'p-6 md:p-8',
+  lg: 'p-8 md:p-12',
 };
 
 const Card: React.FC<CardProps> = ({ children, className = '', hover = true, padding = 'md' }) => {
   return (
     <div
-      className={`bg-white rounded-xl border border-brand-100 shadow-card ${hover ? 'hover:shadow-card-hover hover:-translate-y-0.5' : ''} transition-all ${paddings[padding]} ${className}`}
+      className={`bg-white rounded-2xl border border-brand-100 shadow-card ${hover ? 'hover:shadow-card-hover hover:-translate-y-0.5' : ''} transition-all ${paddings[padding]} ${className}`}
     >
       {children}
     </div>

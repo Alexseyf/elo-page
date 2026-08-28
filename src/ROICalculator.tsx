@@ -5,16 +5,12 @@ import Section, { SectionHeader } from './ui/Section';
 const ROICalculator: React.FC = () => {
   const [students, setStudents] = useState(60);
 
-  // Estimativas reais baseadas nos fluxos do Elo Escola:
-  // - 5 min/aluno/dia de rotina economizados vs agenda física
-  // - 1.5 horas economizadas por aluno por semestre em pareceres com IA
-  // - 20 min economizados por aluno em matrícula/contrato
   const dailySavingHours = Math.round((students * 5 * 22) / 60);
   const semesterParecerHours = Math.round(students * 1.2);
   const totalMonthlyHours = Math.round(dailySavingHours + (semesterParecerHours / 6));
 
   return (
-    <Section id="roi" className="bg-warm">
+    <Section id="roi" className="bg-white">
       <SectionHeader
         title="Calcule o impacto real na"
         highlight="produtividade da sua escola"
@@ -22,7 +18,7 @@ const ROICalculator: React.FC = () => {
       />
 
       <div className="max-w-5xl mx-auto">
-        <div className="bg-white border border-brand-100 rounded-2xl p-6 md:p-12 shadow-card">
+        <div className="bg-white border border-brand-100 rounded-3xl p-6 md:p-12 shadow-card">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Slider Column */}
             <div className="lg:col-span-6 space-y-6">
@@ -31,7 +27,7 @@ const ROICalculator: React.FC = () => {
                   <label htmlFor="roi-slider" className="font-bold text-brand-900 text-base">
                     Quantidade de Alunos Matriculados:
                   </label>
-                  <span className="text-accent font-black text-2xl bg-warm px-3 py-1 rounded-xl border border-brand-100">
+                  <span className="text-accent font-black text-2xl bg-blue-50 px-3.5 py-1 rounded-2xl border border-blue-200/70">
                     {students} alunos
                   </span>
                 </div>
@@ -54,15 +50,15 @@ const ROICalculator: React.FC = () => {
 
               {/* Specific Savings Breakdown */}
               <div className="space-y-3 pt-2">
-                <div className="p-3.5 bg-warm rounded-xl border border-brand-100 flex items-center justify-between">
+                <div className="p-3.5 bg-brand-50/70 rounded-2xl border border-brand-100 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    <Sparkles className="w-4 h-4 text-accent" />
                     <span className="text-xs font-bold text-brand-800">Pareceres & Planejamento BNCC</span>
                   </div>
-                  <span className="text-xs font-extrabold text-brand-900">~{semesterParecerHours}h / semestre</span>
+                  <span className="text-xs font-extrabold text-accent">~{semesterParecerHours}h / semestre</span>
                 </div>
 
-                <div className="p-3.5 bg-warm rounded-xl border border-brand-100 flex items-center justify-between">
+                <div className="p-3.5 bg-brand-50/70 rounded-2xl border border-brand-100 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <Clock className="w-4 h-4 text-brand-600" />
                     <span className="text-xs font-bold text-brand-800">Rotina Diária & Chamadas</span>
@@ -70,38 +66,38 @@ const ROICalculator: React.FC = () => {
                   <span className="text-xs font-extrabold text-brand-900">~{dailySavingHours}h / mês</span>
                 </div>
 
-                <div className="p-3.5 bg-warm rounded-xl border border-brand-100 flex items-center justify-between">
+                <div className="p-3.5 bg-brand-50/70 rounded-2xl border border-brand-100 flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <FileSignature className="w-4 h-4 text-accent" />
+                    <FileSignature className="w-4 h-4 text-emerald-600" />
                     <span className="text-xs font-bold text-brand-800">Contratos & Matrículas Digitais</span>
                   </div>
-                  <span className="text-xs font-extrabold text-brand-900">Zero Papel</span>
+                  <span className="text-xs font-extrabold text-emerald-700">Zero Papel</span>
                 </div>
               </div>
             </div>
 
-            {/* Results Column */}
-            <div className="lg:col-span-6 bg-brand-900 rounded-2xl p-6 md:p-8 text-white shadow-elevated relative overflow-hidden border border-brand-800">
+            {/* Results Column (Crisp Light Theme) */}
+            <div className="lg:col-span-6 bg-gradient-to-br from-blue-50/80 via-white to-brand-50 rounded-3xl p-6 md:p-8 text-brand-900 shadow-card relative overflow-hidden border border-blue-200/80">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 bg-blue-100/70 rounded-2xl flex items-center justify-center shrink-0 border border-blue-200 text-accent">
+                    <Clock className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="text-white/60 font-bold uppercase tracking-widest text-[11px] mb-1">
+                    <p className="text-brand-500 font-bold uppercase tracking-widest text-[11px] mb-1">
                       Tempo Total Recuperado
                     </p>
-                    <p className="text-3xl sm:text-4xl font-black text-white leading-none">
+                    <p className="text-3xl sm:text-4xl font-black text-brand-900 leading-none">
                       {totalMonthlyHours}{' '}
-                      <span className="text-xl text-accent font-bold">horas / mês</span>
+                      <span className="text-xl text-accent font-extrabold">horas / mês</span>
                     </p>
-                    <p className="text-xs text-white/70 mt-1">
+                    <p className="text-xs text-brand-600 font-medium mt-1.5">
                       Equivalente a mais de {Math.round(totalMonthlyHours / 8)} dias úteis de trabalho pedagógico livre.
                     </p>
                   </div>
                 </div>
 
-                <div className="h-px bg-white/10 w-full" />
+                <div className="h-px bg-brand-200/80 w-full" />
 
                 <div className="space-y-2.5">
                   {[
@@ -111,8 +107,8 @@ const ROICalculator: React.FC = () => {
                     'Redução de atritos com comprovação de ciência',
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                      <p className="font-medium text-xs text-white/90">{item}</p>
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <p className="font-semibold text-xs text-brand-700">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -121,7 +117,7 @@ const ROICalculator: React.FC = () => {
                   href="https://wa.me/5553991280129?text=Olá!%20Fiz%20o%20cálculo%20de%20produtividade%20no%20site%20e%20gostaria%20de%20conhecer%20o%20Elo%20Escola%20para%20minha%20instituição."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-accent text-brand-900 font-extrabold py-4 px-6 rounded-xl hover:bg-accent-light transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-sm shadow-subtle"
+                  className="w-full bg-accent text-white font-bold py-4 px-6 rounded-2xl hover:bg-accent-dark transition-all active:scale-[0.98] flex items-center justify-center gap-2 text-sm shadow-subtle"
                 >
                   Agendar Demonstração Personalizada
                   <ArrowRight className="w-4 h-4" />

@@ -38,18 +38,18 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
   const buttonId = `faq-button-${id}`;
 
   return (
-    <div className="border border-brand-100 rounded-xl overflow-hidden bg-white shadow-subtle">
+    <div className="border border-brand-200 rounded-2xl overflow-hidden bg-white shadow-subtle hover:border-brand-300 transition-colors">
       <h3>
         <button
           id={buttonId}
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full text-left p-5 hover:bg-warm/60 transition-colors flex justify-between items-center gap-4 min-h-[48px]"
+          className="w-full text-left p-5 hover:bg-brand-50/50 transition-colors flex justify-between items-center gap-4 min-h-[48px]"
           aria-expanded={isOpen}
           aria-controls={panelId}
         >
           <span className="text-sm md:text-base font-bold text-brand-900 leading-snug">{question}</span>
           <ChevronDown
-            className={`w-5 h-5 text-brand-600 transition-transform duration-200 shrink-0 ${
+            className={`w-5 h-5 text-brand-500 transition-transform duration-200 shrink-0 ${
               isOpen ? 'rotate-180 text-accent' : ''
             }`}
           />
@@ -67,8 +67,8 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <div className="px-5 pb-5 bg-white border-t border-brand-100/70">
-              <p className="text-xs md:text-sm text-brand-700 font-medium leading-relaxed pt-4">
+            <div className="px-5 pb-5 bg-white border-t border-brand-100">
+              <p className="text-xs md:text-sm text-brand-600 font-medium leading-relaxed pt-4">
                 {answer}
               </p>
             </div>
@@ -81,7 +81,7 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 const FAQSection: React.FC = () => {
   return (
-    <Section id="faq" className="bg-warm">
+    <Section id="faq" className="bg-brand-50/40 border-t border-brand-100">
       <SectionHeader
         title="Perguntas"
         highlight="Frequentes"

@@ -22,7 +22,7 @@ const InteractiveShowcase: React.FC = () => {
   const currentProfile = SHOWCASE_PERFIS.find((p) => p.id === activeTab) || SHOWCASE_PERFIS[0];
 
   return (
-    <Section id="demonstracao" className="bg-warm/50 border-y border-brand-100/60">
+    <Section id="demonstracao" className="bg-brand-50/40 border-y border-brand-100">
       <SectionHeader
         title="Uma Plataforma Unificada para"
         highlight="Cada Elo da Escola"
@@ -34,7 +34,7 @@ const InteractiveShowcase: React.FC = () => {
         <div
           role="tablist"
           aria-label="Selecione o perfil de usuário"
-          className="flex flex-wrap sm:flex-nowrap gap-2 p-1.5 bg-warm-dark/40 rounded-2xl max-w-2xl mx-auto mb-10 border border-brand-200/50"
+          className="flex flex-wrap sm:flex-nowrap gap-2 p-1.5 bg-brand-100/80 rounded-2xl max-w-2xl mx-auto mb-10 border border-brand-200"
         >
           <button
             role="tab"
@@ -42,8 +42,8 @@ const InteractiveShowcase: React.FC = () => {
             onClick={() => setActiveTab('diretor')}
             className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'diretor'
-                ? 'bg-brand-900 text-white shadow-elevated'
-                : 'text-brand-700 hover:text-brand-900 hover:bg-white/40'
+                ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
+                : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
             <Building2 className={`w-4 h-4 ${activeTab === 'diretor' ? 'text-accent' : 'text-brand-500'}`} />
@@ -56,8 +56,8 @@ const InteractiveShowcase: React.FC = () => {
             onClick={() => setActiveTab('professor')}
             className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'professor'
-                ? 'bg-brand-900 text-white shadow-elevated'
-                : 'text-brand-700 hover:text-brand-900 hover:bg-white/40'
+                ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
+                : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
             <GraduationCap className={`w-4 h-4 ${activeTab === 'professor' ? 'text-accent' : 'text-brand-500'}`} />
@@ -70,8 +70,8 @@ const InteractiveShowcase: React.FC = () => {
             onClick={() => setActiveTab('responsaveis')}
             className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'responsaveis'
-                ? 'bg-brand-900 text-white shadow-elevated'
-                : 'text-brand-700 hover:text-brand-900 hover:bg-white/40'
+                ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
+                : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
             <HeartHandshake className={`w-4 h-4 ${activeTab === 'responsaveis' ? 'text-accent' : 'text-brand-500'}`} />
@@ -87,12 +87,12 @@ const InteractiveShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-brand-100 rounded-2xl p-6 md:p-10 shadow-card"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-brand-100 rounded-3xl p-6 md:p-10 shadow-card"
           >
             {/* Left Column: Context and Points */}
             <div className="lg:col-span-5 space-y-6">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 text-brand-700 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-accent rounded-full text-xs font-bold uppercase tracking-wider mb-3 border border-blue-100">
                   <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   {currentProfile.roleName}
                 </div>
@@ -107,7 +107,7 @@ const InteractiveShowcase: React.FC = () => {
               {/* Metrics Grid */}
               <div className="grid grid-cols-3 gap-2 py-4 border-y border-brand-100">
                 {currentProfile.metrics.map((metric, i) => (
-                  <div key={i} className="text-center p-2 rounded-lg bg-warm">
+                  <div key={i} className="text-center p-2.5 rounded-xl bg-brand-50 border border-brand-100">
                     <p className="text-[11px] font-semibold text-brand-500 uppercase tracking-wider">{metric.label}</p>
                     <p className="text-sm md:text-base font-extrabold text-brand-900 mt-0.5">{metric.value}</p>
                   </div>
@@ -118,8 +118,8 @@ const InteractiveShowcase: React.FC = () => {
               <ul className="space-y-3">
                 {currentProfile.highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="p-1 bg-accent-muted/40 rounded-full text-accent mt-0.5 shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-amber-700" />
+                    <div className="p-1 bg-blue-50 rounded-full text-accent mt-0.5 shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-accent" />
                     </div>
                     <span className="text-sm font-medium text-brand-700 leading-snug">{highlight}</span>
                   </li>
@@ -128,13 +128,13 @@ const InteractiveShowcase: React.FC = () => {
             </div>
 
             {/* Right Column: Live UI Interactive Mockup */}
-            <div className="lg:col-span-7 bg-warm rounded-xl p-4 md:p-6 border border-brand-100/80">
+            <div className="lg:col-span-7 bg-brand-50/70 rounded-2xl p-4 md:p-6 border border-brand-100">
               {activeTab === 'diretor' && (
                 <div className="space-y-4">
                   {/* Mockup Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-brand-900 text-accent flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
                         <TrendingUp className="w-4 h-4" />
                       </div>
                       <div>
@@ -173,7 +173,7 @@ const InteractiveShowcase: React.FC = () => {
                         <ShieldCheck className="w-4 h-4 text-accent" />
                         Livro de Ocorrências com Hash Jurídico
                       </span>
-                      <span className="text-[10px] font-mono text-brand-400 bg-brand-50 px-2 py-0.5 rounded">
+                      <span className="text-[10px] font-mono text-brand-500 bg-brand-50 px-2 py-0.5 rounded border border-brand-100">
                         #doc-hash-8f4b9a
                       </span>
                     </div>
@@ -190,7 +190,7 @@ const InteractiveShowcase: React.FC = () => {
                   {/* Mockup Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-brand-900 text-accent flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
                         <Sparkles className="w-4 h-4" />
                       </div>
                       <div>
@@ -198,14 +198,14 @@ const InteractiveShowcase: React.FC = () => {
                         <p className="text-[11px] text-brand-500 font-medium">Turma: Maternal 2 · 5 Campos da BNCC</p>
                       </div>
                     </div>
-                    <Badge variant="accent">BNCC Nativa</Badge>
+                    <Badge variant="emerald">BNCC Nativa</Badge>
                   </div>
 
                   {/* AI Activity Suggestion Box */}
                   <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                      <span className="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-accent" />
                         Sugestão de Atividade Gerada por IA
                       </span>
                       <span className="text-[11px] font-semibold text-brand-500">Código EI02EO03</span>
@@ -222,7 +222,7 @@ const InteractiveShowcase: React.FC = () => {
                         <FileText className="w-4 h-4 text-brand-600" />
                         Parecer Semestral: Campo &ldquo;O eu, o outro e o nós&rdquo;
                       </p>
-                      <span className="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">
+                      <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-2 py-0.5 rounded font-bold">
                         PDF Timbrado Gerado
                       </span>
                     </div>
@@ -238,7 +238,7 @@ const InteractiveShowcase: React.FC = () => {
                   {/* Mockup Header */}
                   <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-brand-900 text-accent flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
                         <HeartHandshake className="w-4 h-4" />
                       </div>
                       <div>
@@ -251,20 +251,20 @@ const InteractiveShowcase: React.FC = () => {
 
                   {/* Daily Routine Summary */}
                   <div className="grid grid-cols-3 gap-2">
-                    <div className="bg-white p-3 rounded-lg border border-brand-100 text-center">
+                    <div className="bg-white p-3 rounded-xl border border-brand-100 text-center shadow-subtle">
                       <p className="text-lg">🍲</p>
                       <p className="text-[10px] font-bold text-brand-500 uppercase mt-1">Almoço</p>
                       <p className="text-xs font-bold text-emerald-700">Comeu Tudo</p>
                     </div>
-                    <div className="bg-white p-3 rounded-lg border border-brand-100 text-center">
+                    <div className="bg-white p-3 rounded-xl border border-brand-100 text-center shadow-subtle">
                       <p className="text-lg">💤</p>
                       <p className="text-[10px] font-bold text-brand-500 uppercase mt-1">Soneca</p>
                       <p className="text-xs font-bold text-brand-800">1h45min</p>
                     </div>
-                    <div className="bg-white p-3 rounded-lg border border-brand-100 text-center">
+                    <div className="bg-white p-3 rounded-xl border border-brand-100 text-center shadow-subtle">
                       <p className="text-lg">✨</p>
                       <p className="text-[10px] font-bold text-brand-500 uppercase mt-1">Humor</p>
-                      <p className="text-xs font-bold text-amber-700">Muito Feliz</p>
+                      <p className="text-xs font-bold text-accent font-black">Muito Feliz</p>
                     </div>
                   </div>
 
@@ -273,10 +273,10 @@ const InteractiveShowcase: React.FC = () => {
                     <div>
                       <p className="text-xs font-bold text-brand-900">Parecer Descritivo do 1º Semestre</p>
                       <p className="text-[11px] text-brand-500 font-medium flex items-center gap-1 mt-0.5">
-                        <Clock className="w-3 h-3" /> Disponível para leitura e confirmação de ciência
+                        <Clock className="w-3 h-3 text-accent" /> Disponível para leitura e confirmação de ciência
                       </p>
                     </div>
-                    <button className="text-xs font-bold bg-brand-900 text-white px-3 py-2 rounded-lg hover:bg-brand-800 transition-colors shrink-0">
+                    <button className="text-xs font-bold bg-accent text-white px-3 py-2 rounded-lg hover:bg-accent-dark transition-colors shrink-0 shadow-subtle">
                       Visualizar
                     </button>
                   </div>

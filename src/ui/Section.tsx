@@ -10,7 +10,7 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ children, className = '', id, dark = false, noReveal = false }) => {
-  const base = `py-section-sm md:py-section px-4 ${dark ? 'bg-brand-900 text-white' : 'bg-warm'} ${className}`;
+  const base = `py-section-sm md:py-section px-4 ${dark ? 'bg-brand-50/70 border-y border-brand-100' : 'bg-white'} ${className}`;
   const Wrapper = noReveal ? React.Fragment : Reveal;
 
   return (
@@ -33,12 +33,12 @@ interface SectionHeaderProps {
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ title, highlight, description, center = true }) => (
   <div className={`mb-16 max-w-3xl ${center ? 'mx-auto text-center' : ''}`}>
-    <h2 className="text-4xl md:text-5xl font-extrabold text-balance tracking-tight leading-[1.1]">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-900 text-balance tracking-tight leading-[1.15]">
       {title}
-      {highlight && <span className="text-brand-900"> {highlight}</span>}
+      {highlight && <span className="text-accent"> {highlight}</span>}
     </h2>
     {description && (
-      <p className="mt-4 text-lg text-brand-600 leading-relaxed max-w-2xl mx-auto">
+      <p className="mt-4 text-base md:text-lg text-brand-600 font-medium leading-relaxed max-w-2xl mx-auto">
         {description}
       </p>
     )}

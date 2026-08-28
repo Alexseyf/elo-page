@@ -14,17 +14,17 @@ const CopyableCredential: React.FC<{ label: string; value: string }> = ({ label,
 
   return (
     <div className="flex flex-col gap-1">
-      <span className="text-xs font-bold uppercase tracking-widest text-brand-600 ml-1">{label}</span>
+      <span className="text-xs font-bold uppercase tracking-widest text-brand-500 ml-1">{label}</span>
       <button
         onClick={handleCopy}
-        className="group flex items-center justify-between bg-warm border border-brand-100 hover:border-accent/50 p-3 rounded-xl transition-all min-h-[44px]"
+        className="group flex items-center justify-between bg-white border border-brand-200 hover:border-accent p-3 rounded-xl transition-all min-h-[44px] shadow-subtle"
         aria-label={`Copiar ${label.toLowerCase()}`}
       >
         <code className="text-brand-900 font-bold text-xs">{value}</code>
         {copied ? (
           <Check className="w-4 h-4 text-emerald-600" />
         ) : (
-          <Copy className="w-4 h-4 text-brand-300 group-hover:text-accent transition-colors" />
+          <Copy className="w-4 h-4 text-brand-400 group-hover:text-accent transition-colors" />
         )}
       </button>
     </div>
@@ -52,7 +52,7 @@ const AppSlideshow: React.FC = () => {
 
   return (
     <div
-      className="relative w-full h-full overflow-hidden bg-white rounded-lg"
+      className="relative w-full h-full overflow-hidden bg-white rounded-xl"
       role="region"
       aria-roledescription="carrossel"
       aria-label="Capturas de tela do aplicativo"
@@ -83,14 +83,14 @@ const AppSlideshow: React.FC = () => {
             aria-label={`Slide ${index + 1}`}
             onClick={() => setCurrentSlide(index)}
             className={`h-1.5 rounded-full transition-all duration-500 border-0 p-0 cursor-pointer ${
-              index === currentSlide ? 'w-6 bg-brand-900' : 'w-1.5 bg-brand-200'
+              index === currentSlide ? 'w-6 bg-accent' : 'w-1.5 bg-brand-200'
             }`}
           />
         ))}
       </div>
       <button
         onClick={() => setPaused(!paused)}
-        className="absolute top-2 right-2 z-20 bg-white/90 text-brand-800 text-[10px] font-bold px-2 py-1 rounded shadow-subtle"
+        className="absolute top-2 right-2 z-20 bg-white/90 backdrop-blur-sm text-brand-700 text-[10px] font-bold px-2 py-1 rounded shadow-subtle border border-brand-100"
         aria-label={paused ? 'Continuar rotação' : 'Pausar rotação'}
       >
         {paused ? '▶' : '⏸'}
@@ -162,13 +162,13 @@ const HeroSection: React.FC = () => {
   }, [isModalOpen, closeModal]);
 
   return (
-    <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 px-4 overflow-hidden bg-gradient-to-br from-warm via-white to-warm">
+    <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 px-4 overflow-hidden bg-gradient-to-b from-brand-50/80 via-white to-white">
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Pill Announcement */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-50 border border-amber-200/70 text-amber-900 rounded-full text-xs font-bold mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200/70 text-accent-dark rounded-full text-xs font-bold mb-6">
+              <Sparkles className="w-3.5 h-3.5 text-accent" />
               <span>Educação Infantil Inteligente · BNCC Nativa com IA</span>
             </div>
 
@@ -192,7 +192,7 @@ const HeroSection: React.FC = () => {
               </Button>
               <a
                 href="#demonstracao"
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-brand-800 bg-white border border-brand-200 hover:bg-warm transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-sm font-bold text-brand-700 bg-white border border-brand-200 hover:bg-brand-50 transition-colors shadow-subtle"
               >
                 Ver Demonstração dos Perfis
               </a>
@@ -200,20 +200,20 @@ const HeroSection: React.FC = () => {
 
             <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-brand-100 w-full lg:w-4/5">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-white border border-brand-100 rounded-xl text-brand-700 shadow-subtle">
-                  <Shield className="w-4 h-4 text-accent" />
+                <div className="p-2.5 bg-brand-50 border border-brand-200/70 rounded-xl text-accent shadow-subtle">
+                  <Shield className="w-4 h-4" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-700">Direção</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-white border border-brand-100 rounded-xl text-brand-700 shadow-subtle">
-                  <BookOpen className="w-4 h-4 text-accent" />
+                <div className="p-2.5 bg-brand-50 border border-brand-200/70 rounded-xl text-accent shadow-subtle">
+                  <BookOpen className="w-4 h-4" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-700">Professores</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-white border border-brand-100 rounded-xl text-brand-700 shadow-subtle">
-                  <UserCircle className="w-4 h-4 text-accent" />
+                <div className="p-2.5 bg-brand-50 border border-brand-200/70 rounded-xl text-accent shadow-subtle">
+                  <UserCircle className="w-4 h-4" />
                 </div>
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-700">Famílias</span>
               </div>
@@ -221,9 +221,10 @@ const HeroSection: React.FC = () => {
           </Reveal>
 
           <Reveal delay={0.2} className="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
-            <div className="relative w-full max-w-[280px] mx-auto aspect-[9/19] bg-brand-900 rounded-[2rem] shadow-elevated border-[4px] border-brand-800 p-2">
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-white">
-                <div className="absolute top-0 w-full h-7 bg-brand-50/80 flex items-center px-3 gap-1.5 z-20">
+            {/* Clean Modern Smartphone Frame (Light/Titanium) */}
+            <div className="relative w-full max-w-[290px] mx-auto aspect-[9/19] bg-brand-50 rounded-[2.2rem] shadow-2xl border-[3px] border-brand-200 p-2.5">
+              <div className="w-full h-full rounded-2xl overflow-hidden relative bg-white shadow-inner">
+                <div className="absolute top-0 w-full h-7 bg-brand-50/90 backdrop-blur-sm border-b border-brand-100 flex items-center px-3 gap-1.5 z-20">
                   <div className="w-1.5 h-1.5 rounded-full bg-rose/60" />
                   <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-300" />
@@ -244,11 +245,11 @@ const HeroSection: React.FC = () => {
           ref={modalRef}
         >
           <div
-            className="fixed inset-0 bg-brand-900/70 backdrop-blur-sm animate-in fade-in duration-200"
+            className="fixed inset-0 bg-brand-950/40 backdrop-blur-sm animate-in fade-in duration-200"
             onClick={closeModal}
             aria-hidden="true"
           />
-          <div className="relative w-full max-w-3xl bg-white rounded-2xl shadow-modal animate-in zoom-in-95 duration-200 z-10 my-8 border border-brand-100">
+          <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-modal animate-in zoom-in-95 duration-200 z-10 my-8 border border-brand-100">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-20 p-3 hover:bg-brand-50 rounded-xl text-brand-400 hover:text-brand-700 transition-colors"
@@ -259,7 +260,7 @@ const HeroSection: React.FC = () => {
 
             <div className="p-6 md:p-10">
               <div className="text-center mb-8">
-                <span className="text-xs font-bold uppercase tracking-widest text-accent bg-amber-50 px-3 py-1 rounded-full border border-amber-200/50">
+                <span className="text-xs font-bold uppercase tracking-widest text-accent bg-blue-50 px-3 py-1 rounded-full border border-blue-200/50">
                   Acesso Instantâneo
                 </span>
                 <h2 id="modal-title" className="text-2xl md:text-3xl font-extrabold text-brand-900 mt-2">
@@ -271,22 +272,22 @@ const HeroSection: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-                <div className="bg-warm p-4 rounded-xl border border-brand-100 space-y-2">
+                <div className="bg-brand-50/70 p-4 rounded-2xl border border-brand-100 space-y-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Administrativo / Direção</p>
                   <CopyableCredential label="E-mail" value="admin@email.com" />
                   <CopyableCredential label="Senha" value="Admin@123" />
                 </div>
-                <div className="bg-warm p-4 rounded-xl border border-brand-100 space-y-2">
+                <div className="bg-brand-50/70 p-4 rounded-2xl border border-brand-100 space-y-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Professor (BNCC & IA)</p>
                   <CopyableCredential label="E-mail" value="prof@email.com" />
                   <CopyableCredential label="Senha" value="Prof@123" />
                 </div>
-                <div className="bg-warm p-4 rounded-xl border border-brand-100 space-y-2">
+                <div className="bg-brand-50/70 p-4 rounded-2xl border border-brand-100 space-y-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Responsável / Pais</p>
                   <CopyableCredential label="E-mail" value="resp@email.com" />
                   <CopyableCredential label="Senha" value="Resp@123" />
                 </div>
-                <div className="bg-warm p-4 rounded-xl border border-brand-100 space-y-2">
+                <div className="bg-brand-50/70 p-4 rounded-2xl border border-brand-100 space-y-2">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-700">Auxiliar de Sala</p>
                   <CopyableCredential label="E-mail" value="aux@email.com" />
                   <CopyableCredential label="Senha" value="Aux@123" />
@@ -297,7 +298,7 @@ const HeroSection: React.FC = () => {
                 href="https://meueloescola.com.br/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-brand-900 text-white font-bold py-4 px-8 rounded-xl hover:bg-brand-800 transition-all active:scale-[0.98] shadow-elevated"
+                className="w-full inline-flex items-center justify-center gap-2 bg-accent text-white font-bold py-4 px-8 rounded-xl hover:bg-accent-dark transition-all active:scale-[0.98] shadow-elevated"
               >
                 Acessar Plataforma Agora
                 <ArrowRight className="w-4 h-4" />
