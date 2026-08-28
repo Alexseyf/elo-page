@@ -40,42 +40,42 @@ const InteractiveShowcase: React.FC = () => {
             role="tab"
             aria-selected={activeTab === 'diretor'}
             onClick={() => setActiveTab('diretor')}
-            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
+            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'diretor'
                 ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
                 : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
-            <Building2 className={`w-4 h-4 ${activeTab === 'diretor' ? 'text-accent' : 'text-brand-500'}`} />
-            <span>Direção & Gestão</span>
+            <Building2 className={`w-4 h-4 shrink-0 ${activeTab === 'diretor' ? 'text-accent' : 'text-brand-500'}`} />
+            <span className="whitespace-nowrap">Direção & Gestão</span>
           </button>
 
           <button
             role="tab"
             aria-selected={activeTab === 'professor'}
             onClick={() => setActiveTab('professor')}
-            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
+            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'professor'
                 ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
                 : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
-            <GraduationCap className={`w-4 h-4 ${activeTab === 'professor' ? 'text-accent' : 'text-brand-500'}`} />
-            <span>Professores</span>
+            <GraduationCap className={`w-4 h-4 shrink-0 ${activeTab === 'professor' ? 'text-accent' : 'text-brand-500'}`} />
+            <span className="whitespace-nowrap">Professores</span>
           </button>
 
           <button
             role="tab"
             aria-selected={activeTab === 'responsaveis'}
             onClick={() => setActiveTab('responsaveis')}
-            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl text-sm font-bold transition-all min-h-[48px] ${
+            className={`flex-1 flex items-center justify-center gap-2.5 py-3.5 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-bold transition-all min-h-[48px] ${
               activeTab === 'responsaveis'
                 ? 'bg-white text-accent shadow-subtle border border-brand-200/60'
                 : 'text-brand-600 hover:text-brand-900 hover:bg-white/50'
             }`}
           >
-            <HeartHandshake className={`w-4 h-4 ${activeTab === 'responsaveis' ? 'text-accent' : 'text-brand-500'}`} />
-            <span>Famílias & Pais</span>
+            <HeartHandshake className={`w-4 h-4 shrink-0 ${activeTab === 'responsaveis' ? 'text-accent' : 'text-brand-500'}`} />
+            <span className="whitespace-nowrap">Famílias & Pais</span>
           </button>
         </div>
 
@@ -87,14 +87,14 @@ const InteractiveShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-brand-100 rounded-3xl p-6 md:p-10 shadow-card"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-brand-100 rounded-3xl p-5 sm:p-8 md:p-10 shadow-card"
           >
             {/* Left Column: Context and Points */}
             <div className="lg:col-span-5 space-y-6">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-accent rounded-full text-xs font-bold uppercase tracking-wider mb-3 border border-blue-100">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  {currentProfile.roleName}
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
+                  <span>{currentProfile.roleName}</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-brand-900 tracking-tight leading-snug">
                   {currentProfile.label}
@@ -107,9 +107,9 @@ const InteractiveShowcase: React.FC = () => {
               {/* Metrics Grid */}
               <div className="grid grid-cols-3 gap-2 py-4 border-y border-brand-100">
                 {currentProfile.metrics.map((metric, i) => (
-                  <div key={i} className="text-center p-2.5 rounded-xl bg-brand-50 border border-brand-100">
-                    <p className="text-[11px] font-semibold text-brand-500 uppercase tracking-wider">{metric.label}</p>
-                    <p className="text-sm md:text-base font-extrabold text-brand-900 mt-0.5">{metric.value}</p>
+                  <div key={i} className="text-center p-2 sm:p-2.5 rounded-xl bg-brand-50 border border-brand-100">
+                    <p className="text-[10px] sm:text-[11px] font-semibold text-brand-500 uppercase tracking-wider">{metric.label}</p>
+                    <p className="text-xs sm:text-sm md:text-base font-extrabold text-brand-900 mt-0.5 whitespace-nowrap">{metric.value}</p>
                   </div>
                 ))}
               </div>
@@ -128,13 +128,13 @@ const InteractiveShowcase: React.FC = () => {
             </div>
 
             {/* Right Column: Live UI Interactive Mockup */}
-            <div className="lg:col-span-7 bg-brand-50/70 rounded-2xl p-4 md:p-6 border border-brand-100">
+            <div className="lg:col-span-7 bg-brand-50/70 rounded-2xl p-4 sm:p-6 border border-brand-100">
               {activeTab === 'diretor' && (
                 <div className="space-y-4">
                   {/* Mockup Header */}
-                  <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100 shrink-0">
                         <TrendingUp className="w-4 h-4" />
                       </div>
                       <div>
@@ -142,7 +142,9 @@ const InteractiveShowcase: React.FC = () => {
                         <p className="text-[11px] text-brand-500 font-medium">Escola Modelo · Ano Letivo Vigente</p>
                       </div>
                     </div>
-                    <Badge variant="accent">Snapshot Ativo</Badge>
+                    <div className="self-start sm:self-auto shrink-0">
+                      <Badge variant="accent">Snapshot Ativo</Badge>
+                    </div>
                   </div>
 
                   {/* Financial & Contract Cards */}
@@ -151,8 +153,8 @@ const InteractiveShowcase: React.FC = () => {
                       <p className="text-[11px] font-bold text-brand-500 uppercase">Lucratividade Berçário</p>
                       <p className="text-xl font-black text-brand-900 mt-1">R$ 14.850,00</p>
                       <div className="flex items-center gap-1.5 mt-2 text-xs font-semibold text-emerald-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                        Margem líquida de 41,2%
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                        <span>Margem líquida de 41,2%</span>
                       </div>
                     </div>
 
@@ -160,20 +162,20 @@ const InteractiveShowcase: React.FC = () => {
                       <p className="text-[11px] font-bold text-brand-500 uppercase">Assinaturas de Contratos</p>
                       <p className="text-xl font-black text-brand-900 mt-1">94% Concluídas</p>
                       <div className="flex items-center gap-1.5 mt-2 text-xs font-semibold text-brand-600">
-                        <FileCheck2 className="w-3.5 h-3.5 text-accent" />
-                        84 de 89 assinados digitalmente
+                        <FileCheck2 className="w-3.5 h-3.5 text-accent shrink-0" />
+                        <span>84 de 89 assinados digitalmente</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Incident / Occurrences Log Preview */}
-                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle">
-                    <div className="flex items-center justify-between mb-2">
+                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle space-y-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
                       <span className="text-xs font-bold text-brand-800 flex items-center gap-2">
-                        <ShieldCheck className="w-4 h-4 text-accent" />
+                        <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
                         Livro de Ocorrências com Hash Jurídico
                       </span>
-                      <span className="text-[10px] font-mono text-brand-500 bg-brand-50 px-2 py-0.5 rounded border border-brand-100">
+                      <span className="self-start sm:self-auto text-[10px] font-mono text-brand-500 bg-brand-50 px-2 py-0.5 rounded border border-brand-100 shrink-0 whitespace-nowrap">
                         #doc-hash-8f4b9a
                       </span>
                     </div>
@@ -188,9 +190,9 @@ const InteractiveShowcase: React.FC = () => {
               {activeTab === 'professor' && (
                 <div className="space-y-4">
                   {/* Mockup Header */}
-                  <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100 shrink-0">
                         <Sparkles className="w-4 h-4" />
                       </div>
                       <div>
@@ -198,17 +200,19 @@ const InteractiveShowcase: React.FC = () => {
                         <p className="text-[11px] text-brand-500 font-medium">Turma: Maternal 2 · 5 Campos da BNCC</p>
                       </div>
                     </div>
-                    <Badge variant="emerald">BNCC Nativa</Badge>
+                    <div className="self-start sm:self-auto shrink-0">
+                      <Badge variant="emerald">BNCC Nativa</Badge>
+                    </div>
                   </div>
 
                   {/* AI Activity Suggestion Box */}
                   <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-accent" />
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
+                      <span className="self-start sm:self-auto text-xs font-bold text-blue-700 bg-blue-50 border border-blue-100 px-2.5 py-1 rounded-md flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                        <Sparkles className="w-3.5 h-3.5 text-accent shrink-0" />
                         Sugestão de Atividade Gerada por IA
                       </span>
-                      <span className="text-[11px] font-semibold text-brand-500">Código EI02EO03</span>
+                      <span className="self-start sm:self-auto text-[11px] font-semibold text-brand-500 shrink-0 whitespace-nowrap">Código EI02EO03</span>
                     </div>
                     <p className="text-xs text-brand-700 font-medium leading-relaxed">
                       <strong>Circuito dos Sentimentos:</strong> Atividade em roda com espelhos e cartões ilustrados onde as crianças identificam e expressam emoções em grupo, promovendo cooperação e empatia.
@@ -216,13 +220,13 @@ const InteractiveShowcase: React.FC = () => {
                   </div>
 
                   {/* Descriptive Parecer Preview */}
-                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle">
-                    <div className="flex items-center justify-between mb-2">
+                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle space-y-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
                       <p className="text-xs font-bold text-brand-900 flex items-center gap-1.5">
-                        <FileText className="w-4 h-4 text-brand-600" />
-                        Parecer Semestral: Campo &ldquo;O eu, o outro e o nós&rdquo;
+                        <FileText className="w-4 h-4 text-brand-600 shrink-0" />
+                        <span>Parecer Semestral: &ldquo;O eu, o outro e o nós&rdquo;</span>
                       </p>
-                      <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-2 py-0.5 rounded font-bold">
+                      <span className="self-start sm:self-auto text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-2 py-0.5 rounded font-bold shrink-0 whitespace-nowrap">
                         PDF Timbrado Gerado
                       </span>
                     </div>
@@ -236,9 +240,9 @@ const InteractiveShowcase: React.FC = () => {
               {activeTab === 'responsaveis' && (
                 <div className="space-y-4">
                   {/* Mockup Header */}
-                  <div className="flex items-center justify-between pb-3 border-b border-brand-200/60">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-brand-200/60">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100">
+                      <div className="w-8 h-8 rounded-lg bg-blue-50 text-accent flex items-center justify-center border border-blue-100 shrink-0">
                         <HeartHandshake className="w-4 h-4" />
                       </div>
                       <div>
@@ -246,7 +250,9 @@ const InteractiveShowcase: React.FC = () => {
                         <p className="text-[11px] text-brand-500 font-medium">Acompanhamento do Aluno em Tempo Real</p>
                       </div>
                     </div>
-                    <Badge variant="accent">Canal Seguro</Badge>
+                    <div className="self-start sm:self-auto shrink-0">
+                      <Badge variant="accent">Canal Seguro</Badge>
+                    </div>
                   </div>
 
                   {/* Daily Routine Summary */}
@@ -269,14 +275,14 @@ const InteractiveShowcase: React.FC = () => {
                   </div>
 
                   {/* Official Notice / Document Confirmation */}
-                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle flex items-center justify-between">
+                  <div className="bg-white p-4 rounded-xl border border-brand-100 shadow-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
                       <p className="text-xs font-bold text-brand-900">Parecer Descritivo do 1º Semestre</p>
                       <p className="text-[11px] text-brand-500 font-medium flex items-center gap-1 mt-0.5">
-                        <Clock className="w-3 h-3 text-accent" /> Disponível para leitura e confirmação de ciência
+                        <Clock className="w-3 h-3 text-accent shrink-0" /> Disponível para leitura e confirmação de ciência
                       </p>
                     </div>
-                    <button className="text-xs font-bold bg-accent text-white px-3 py-2 rounded-lg hover:bg-accent-dark transition-colors shrink-0 shadow-subtle">
+                    <button className="self-start sm:self-auto text-xs font-bold bg-accent text-white px-3.5 py-2 rounded-lg hover:bg-accent-dark transition-colors shrink-0 shadow-subtle">
                       Visualizar
                     </button>
                   </div>

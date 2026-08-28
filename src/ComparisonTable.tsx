@@ -18,7 +18,7 @@ const ComparisonTable: React.FC = () => {
         <div className="bg-white border border-rose-200/80 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-card">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2.5 bg-rose-50 rounded-2xl text-rose border border-rose-100">
+              <div className="p-2.5 bg-rose-50 rounded-2xl text-rose border border-rose-100 shrink-0">
                 <XCircle className="w-5 h-5" />
               </div>
               <div>
@@ -58,7 +58,7 @@ const ComparisonTable: React.FC = () => {
         <div className="bg-white border border-brand-200 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-card">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2.5 bg-brand-50 rounded-2xl text-brand-700 border border-brand-200">
+              <div className="p-2.5 bg-brand-50 rounded-2xl text-brand-700 border border-brand-200 shrink-0">
                 <AlertTriangle className="w-5 h-5 text-accent" />
               </div>
               <div>
@@ -99,9 +99,9 @@ const ComparisonTable: React.FC = () => {
           <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-2xl pointer-events-none" />
 
           <div>
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-6">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-blue-50 rounded-2xl text-accent border border-blue-200">
+                <div className="p-2.5 bg-blue-50 rounded-2xl text-accent border border-blue-200 shrink-0">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
@@ -109,7 +109,7 @@ const ComparisonTable: React.FC = () => {
                   <p className="text-xs text-accent font-bold">Ecossistema Completo</p>
                 </div>
               </div>
-              <span className="text-[10px] font-bold bg-accent text-white px-2.5 py-1 rounded-md shadow-subtle">
+              <span className="self-start sm:self-auto text-[10px] font-bold bg-accent text-white px-2.5 py-1 rounded-md shadow-subtle shrink-0 whitespace-nowrap">
                 Recomendado
               </span>
             </div>
